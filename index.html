@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Steeve H. - Services de DJ Professionnel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #ff6b00, #ff8800, #ffa200);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient 5s ease infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                border-color: #ff6b00;
+            }
+
+            50% {
+                border-color: #ffa200;
+            }
+
+            100% {
+                border-color: #ff6b00;
+            }
+        }
+
+        .animate-border {
+            animation: pulse-border 2s infinite;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900">
+    <!-- Header with Glassmorphism -->
+    <header class="fixed w-full z-50 backdrop-blur-md bg-black/70">
+        <nav class="container mx-auto flex justify-end items-center px-4 py-6">
+            <ul class="flex space-x-8 text-white">
+                <li><a href="#accueil" class="hover:text-orange-500 transition-colors duration-300">Accueil</a></li>
+                <li><a href="#services" class="hover:text-orange-500 transition-colors duration-300">Services</a></li>
+                <li><a href="#contact" class="hover:text-orange-500 transition-colors duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Dynamic Background -->
+    <section id="accueil"
+        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-orange-900">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left md:w-1/2" data-aos="fade-right">
+                <h2 class="gradient-text text-7xl font-bold mb-6">DJ Steeve H.</h2>
+                <p class="text-white text-2xl mb-8">Créateur d'ambiances inoubliables</p>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
+                <div
+                    class="w-64 h-64 md:w-96 md:h-96 mx-auto rounded-full overflow-hidden border-4 animate-border hover-scale">
+                    <img src="https://placehold.co/400x400" alt="DJ Steeve H." class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services with Hover Effects -->
+    <section id="services" class="py-32 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <h2 class="gradient-text text-5xl font-bold text-center mb-16" data-aos="fade-up">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h3 class="text-3xl text-orange-500 mb-4">Mariages</h3>
+                    <p class="text-gray-300">Animation musicale personnalisée pour votre jour spécial</p>
+                </div>
+                <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <h3 class="text-3xl text-orange-500 mb-4">Soirées Privées</h3>
+                    <p class="text-gray-300">Ambiance sur mesure pour vos événements privés</p>
+                </div>
+                <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <h3 class="text-3xl text-orange-500 mb-4">Événements Corporate</h3>
+                    <p class="text-gray-300">Solutions professionnelles pour vos événements d'entreprise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact with Modern Design -->
+    <section id="contact" class="py-32 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="gradient-text text-5xl font-bold text-center mb-16" data-aos="fade-up">Contactez-moi</h2>
+            <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <form class="space-y-6">
+                    <input type="text" placeholder="Nom"
+                        class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300">
+                    <input type="email" placeholder="Email"
+                        class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300">
+                    <textarea placeholder="Message" rows="4"
+                        class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300"></textarea>
+                    <button
+                        class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:-translate-y-1">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p class="text-lg">&copy; 2024 DJ Steeve H. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>
