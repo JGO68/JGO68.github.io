@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CA">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ Steeve H. - Services de DJ Professionnel</title>
+    <title>DJ Steeve H. - DJ Professionnel Québec | Pop, Dance & Latin | Mariages & Événements</title>
+    <meta name="description"
+        content="DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages et événements corporatifs. Créez une ambiance inoubliable pour votre événement!">
+    <meta name="keywords"
+        content="DJ Québec, DJ mariage Québec, musique pop, musique dance, musique latine, DJ événements corporatifs, DJ Steeve H">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="DJ Steeve H. - DJ Professionnel Québec">
+    <meta property="og:description"
+        content="DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages et événements corporatifs.">
+    <meta property="og:image" content="photo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -63,14 +72,16 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
             <div class="text-center md:text-left md:w-1/2" data-aos="fade-right">
                 <h2 class="gradient-text text-7xl font-bold mb-6">DJ Steeve H.</h2>
-                <p class="text-white text-2xl mb-8">Créateur d'ambiances inoubliables</p>
+                <p class="text-white text-2xl mb-4">DJ Professionnel à Québec</p>
+                <p class="text-orange-400 text-xl mb-8">Spécialiste en musique Pop, Dance et Latine</p>
+                <p class="text-gray-300 text-lg">Créateur d'ambiances inoubliables pour vos événements</p>
             </div>
             <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
                 <div
                     class="w-64 h-64 md:w-96 md:h-96 mx-auto rounded-full overflow-hidden border-4 animate-border hover-scale">
-                    <img src="photo.png" alt="DJ Steeve H." class="w-full h-full object-cover scale-125">
+                    <img src="photo.png" alt="DJ Steeve H. - DJ Professionnel Québec"
+                        class="w-full h-full object-cover scale-125">
                 </div>
-
             </div>
         </div>
     </section>
@@ -83,17 +94,20 @@
                 <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
                     data-aos-delay="100">
                     <h3 class="text-3xl text-orange-500 mb-4">Mariages</h3>
-                    <p class="text-gray-300">Animation musicale personnalisée pour votre jour spécial</p>
+                    <p class="text-gray-300">Animation musicale personnalisée avec un mix parfait de Pop, Dance et Latin
+                        pour votre jour spécial</p>
                 </div>
                 <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
                     data-aos-delay="200">
-                    <h3 class="text-3xl text-orange-500 mb-4">Soirées Privées</h3>
-                    <p class="text-gray-300">Ambiance sur mesure pour vos événements privés</p>
+                    <h3 class="text-3xl text-orange-500 mb-4">Événements Corporatifs</h3>
+                    <p class="text-gray-300">Solutions professionnelles et ambiance adaptée pour vos événements
+                        d'entreprise à Québec</p>
                 </div>
                 <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
                     data-aos-delay="300">
-                    <h3 class="text-3xl text-orange-500 mb-4">Événements Corporate</h3>
-                    <p class="text-gray-300">Solutions professionnelles pour vos événements d'entreprise</p>
+                    <h3 class="text-3xl text-orange-500 mb-4">Soirées Privées</h3>
+                    <p class="text-gray-300">Animation sur mesure avec les meilleurs hits Pop, Dance et musique Latine
+                    </p>
                 </div>
             </div>
         </div>
@@ -104,24 +118,25 @@
         <div class="container mx-auto px-4">
             <h2 class="gradient-text text-5xl font-bold text-center mb-16" data-aos="fade-up">Contactez-moi</h2>
             <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                <form class="space-y-6">
-                    <input type="text" placeholder="Nom"
+                <form class="space-y-6" name="contact" method="POST" data-netlify="true">
+                    <input type="text" name="nom" placeholder="Nom" required
                         class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300">
-                    <input type="email" placeholder="Email"
+                    <input type="email" name="email" placeholder="Email" required
                         class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300">
-                    <textarea placeholder="Message" rows="4"
+                    <textarea name="message" placeholder="Message" rows="4" required
                         class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300"></textarea>
-                    <button
+                    <button type="submit"
                         class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:-translate-y-1">Envoyer</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black py-8">
         <div class="container mx-auto px-4 text-center text-gray-400">
-            <p class="text-lg">&copy; 2024 DJ Steeve H. Tous droits réservés.</p>
+            <p class="text-lg mb-4">DJ Steeve H. - DJ Professionnel à Québec</p>
+            <p class="text-sm mb-2">Spécialiste en musique Pop, Dance et Latine</p>
+            <p class="text-sm">© 2024 DJ Steeve H. Tous droits réservés.</p>
         </div>
     </footer>
 
