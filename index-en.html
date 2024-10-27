@@ -55,6 +55,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('fr') && !window.location.href.includes('index.html')) {
+            window.location.href = 'index.html';
+        } else if (userLang.startsWith('en') && !window.location.href.includes('index-en.html')) {
+            window.location.href = 'index-en.html';
+        } else if (userLang.startsWith('es') && !window.location.href.includes('index-es.html')) {
+            window.location.href = 'index-es.html';
+        }
+    </script>
     <style>
         .gradient-text {
             background: linear-gradient(45deg, #ff6b00, #ff8800, #ffa200);
