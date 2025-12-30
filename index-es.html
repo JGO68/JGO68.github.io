@@ -103,62 +103,10 @@
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        const userLang = navigator.language || navigator.userLanguage;
-        if (!window.location.href.includes('index') && !window.location.href.includes('index-en') && !window.location.href.includes('index-es')) {
-            if (userLang.startsWith('fr')) {
-                window.location.href = 'index.html';
-            } else if (userLang.startsWith('en')) {
-                window.location.href = 'index-en.html';
-            } else if (userLang.startsWith('es')) {
-                window.location.href = 'index-es.html';
-            }
-        }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-191XV8D4B1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-191XV8D4B1');
-    </script>
-    <style>
-        .gradient-text {
-            background: linear-gradient(45deg, #ff6b00, #ff8800, #ffa200);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: gradient 5s ease infinite;
-        }
-
-        @keyframes pulse-border {
-            0% {
-                border-color: #ff6b00;
-            }
-
-            50% {
-                border-color: #ffa200;
-            }
-
-            100% {
-                border-color: #ff6b00;
-            }
-        }
-
-        .animate-border {
-            animation: pulse-border 2s infinite;
-        }
-
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <script src="main.js"></script>
 </head>
 
 <body class="bg-gray-900">
@@ -351,13 +299,7 @@
         </div>
     </footer>
 
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 0
-        });
-    </script>
+
 </body>
 
 </html>

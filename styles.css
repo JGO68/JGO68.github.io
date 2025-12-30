@@ -1,0 +1,33 @@
+.gradient-text {
+    background: linear-gradient(45deg, #ff6b00, #ff8800, #ffa200);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        border-color: #ff6b00;
+    }
+
+    50% {
+        border-color: #ffa200;
+    }
+
+    100% {
+        border-color: #ff6b00;
+    }
+}
+
+.animate-border {
+    animation: pulse-border 2s infinite;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
