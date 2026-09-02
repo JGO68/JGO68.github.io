@@ -6,6 +6,19 @@ body {
     overflow-x: hidden;
 }
 
+select {
+    color-scheme: dark;
+}
+
+select option {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+select option:disabled {
+    color: #9ca3af;
+}
+
 section {
     scroll-margin-top: 5rem;
 }
