@@ -28,10 +28,10 @@
     <meta name="twitter:image" content="https://djsteeveh.com/mariage.jpg">
     <meta name="twitter:image:alt" content="Couple dansant devant une console DJ dans une salle de réception">
 
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-191XV8D4B1"></script>
     <script type="application/ld+json">
@@ -78,7 +78,6 @@
           },
           "url": "https://djsteeveh.com/",
           "telephone": "+1-418-431-3229",
-          "priceRange": "$$",
           "areaServed": [
             "Québec",
             "Lévis",
@@ -126,13 +125,13 @@
     <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
         <nav class="container mx-auto flex items-center justify-between gap-4 px-4 py-4 lg:px-8"
             aria-label="Navigation principale">
-            <a href="../index.html" class="shrink-0 text-lg font-bold tracking-tight text-orange-500 sm:text-xl"
+            <a href="/" class="shrink-0 text-lg font-bold tracking-tight text-orange-500 sm:text-xl"
                 aria-label="Retour à l'accueil de DJ Steeve H.">
                 DJ Steeve H.
             </a>
 
             <div class="hidden items-center gap-6 text-sm text-gray-200 md:flex">
-                <a href="../index.html" class="transition-colors hover:text-orange-400">Accueil</a>
+                <a href="/" class="transition-colors hover:text-orange-400">Accueil</a>
                 <a href="#sur-mesure" class="transition-colors hover:text-orange-400">Votre mariage</a>
                 <a href="#avis" class="transition-colors hover:text-orange-400">Avis</a>
                 <a href="#mixes" class="transition-colors hover:text-orange-400">Mixes</a>
@@ -140,6 +139,12 @@
             </div>
 
             <div class="flex items-center gap-2 sm:gap-3">
+                <div class="flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wide"
+                    aria-label="Choix de langue">
+                    <a href="/dj-mariage-quebec/" class="text-orange-400" aria-current="page">FR</a>
+                    <a href="/index-en.html" class="text-gray-300 transition-colors hover:text-orange-400">EN</a>
+                    <a href="/index-es.html" class="text-gray-300 transition-colors hover:text-orange-400">ES</a>
+                </div>
                 <a href="tel:+14184313229"
                     class="hidden whitespace-nowrap rounded-lg border border-orange-500/40 px-3 py-2 text-sm text-orange-300 transition-colors hover:border-orange-400 hover:text-orange-200 sm:inline-flex">
                     (418) 431-3229
@@ -191,7 +196,7 @@
                 <figure class="relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-orange-300/30 bg-black/30 shadow-2xl shadow-black/40"
                     data-aos="fade-left">
                     <div class="aspect-[3/2]">
-                        <img src="../mariage.jpg"
+                        <img src="/mariage.jpg"
                             alt="Couple dansant devant une console DJ dans une salle de réception"
                             class="h-full w-full object-cover" width="1152" height="768" fetchpriority="high">
                     </div>
@@ -210,7 +215,7 @@
                         Un mariage à votre image
                     </h2>
                     <p class="mt-6 text-lg leading-relaxed text-gray-300">
-                        Un mariage ne se ressemble pas d'un couple à l'autre. Vos goûts musicaux, vos préférences et
+                        Chaque couple a une vision différente de son mariage. Vos goûts musicaux, vos préférences et
                         l'ambiance souhaitée servent de point de départ pour imaginer une soirée qui vous ressemble.
                         Chaque demande peut être précisée selon les besoins de votre événement.
                     </p>
@@ -312,8 +317,8 @@
                     </h2>
                     <p class="mt-6 text-lg leading-relaxed text-gray-300">
                         Pour choisir un DJ pour votre mariage à Québec, l'essentiel est de trouver l'équilibre entre votre vision et
-                        l'énergie de la salle. Les styles pop, dance et latino font partie de l'univers musical présenté
-                        sur le site, et vos indications permettent de préciser la direction de la soirée.
+                        l'énergie de la salle. Les styles pop, dance et latino peuvent se côtoyer selon l'ambiance recherchée,
+                        et vos indications permettent de préciser la direction de la soirée.
                     </p>
                     <p class="mt-4 leading-relaxed text-gray-400">
                         Vous pouvez partager vos incontournables, les ambiances que vous aimez et les préférences à
@@ -345,7 +350,7 @@
         <section id="avis" class="bg-gradient-to-b from-black to-gray-900 px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto max-w-6xl">
                 <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Preuve sociale</p>
+                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Des expériences partagées</p>
                     <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Avis de clients</h2>
                     <div class="mt-5 flex items-center justify-center gap-2 text-orange-400" aria-label="5.0 sur Google">
                         <span class="text-2xl tracking-[0.15em]" aria-hidden="true">★★★★★</span>
@@ -360,13 +365,6 @@
                 <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <blockquote class="rounded-2xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
                         data-aos-delay="100">
-                        <p class="leading-relaxed text-gray-300">"Steeve a participé à la réussite de notre Party de Noël, en
-                            mettant de l'ambiance avec sa musique, tout en respectant les demandes spéciales de ma gang !"</p>
-                        <footer class="mt-5 font-semibold text-orange-300">Alexandra Boulanger</footer>
-                    </blockquote>
-
-                    <blockquote class="rounded-2xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="150">
                         <p class="leading-relaxed text-gray-300">"Très bon DJ avec du bon son qui vous fait oublier la douleur
                             de vos talons aiguilles et vous entraîne à rester sur la piste de danse car à chaque fois ses
                             chansons sont trop bonnes!!! 🎉💃"</p>
@@ -374,26 +372,26 @@
                     </blockquote>
 
                     <blockquote class="rounded-2xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="200">
+                        data-aos-delay="150">
                         <p class="leading-relaxed text-gray-300">"DJ professionnel, fiable et qui sait écouter les attentes de
                             ses clients. Je recommande!"</p>
                         <footer class="mt-5 font-semibold text-orange-300">Cyndie Feltz</footer>
                     </blockquote>
 
                     <blockquote class="rounded-2xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="250">
+                        data-aos-delay="200">
                         <p class="leading-relaxed text-gray-300">"Ses choix musicaux sont excellents. Je le recommande fortement."</p>
                         <footer class="mt-5 font-semibold text-orange-300">Criseida Euan</footer>
                     </blockquote>
 
                     <blockquote class="rounded-2xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="300">
+                        data-aos-delay="250">
                         <p class="leading-relaxed text-gray-300">"Excellent DJ, je recommande chaudement !"</p>
                         <footer class="mt-5 font-semibold text-orange-300">Yann Cochennec</footer>
                     </blockquote>
 
                     <blockquote class="rounded-2xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="350">
+                        data-aos-delay="300">
                         <p class="leading-relaxed text-gray-300">"Steeve est très professionnel ! Je le recommande fortement !"</p>
                         <footer class="mt-5 font-semibold text-orange-300">Sylvie Herpin</footer>
                     </blockquote>
@@ -462,14 +460,14 @@
                         Un service dans la grande région de Québec
                     </h2>
                     <p class="mt-6 text-lg leading-relaxed text-gray-200">
-                        Vous planifiez votre réception à Québec ou vous cherchez un DJ à Lévis pour votre mariage? Le service mariage
+                        Vous planifiez votre réception à Québec ou vous cherchez un DJ à Lévis pour votre mariage? Le service de mariage
                         s'adresse aux événements de la grande région. Indiquez la ville et le lieu de votre événement dans
                         le formulaire pour donner le bon contexte à votre demande.
                     </p>
                 </div>
 
                 <div class="rounded-2xl border border-orange-300/20 bg-black/40 p-7" data-aos="fade-left">
-                    <h3 class="text-xl font-semibold text-white">Zones déjà indiquées</h3>
+                    <h3 class="text-xl font-semibold text-white">Secteurs desservis</h3>
                     <ul class="mt-5 grid grid-cols-2 gap-3 text-gray-300 sm:grid-cols-3 lg:grid-cols-2">
                         <li class="rounded-lg bg-white/5 px-3 py-2">Québec</li>
                         <li class="rounded-lg bg-white/5 px-3 py-2">Lévis</li>
@@ -498,14 +496,33 @@
                 </div>
                 <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                     <form data-preserve-query class="space-y-6" action="https://formspree.io/f/mgvevgdp" method="POST">
-                        <input type="text" name="nom" placeholder="Nom" required
-                            class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300">
-                        <input type="email" name="email" placeholder="Email" required
-                            class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300">
-                        <textarea name="message" placeholder="Message" rows="4" required
-                            class="w-full p-4 rounded-lg bg-gray-800/50 text-white border border-orange-500/30 focus:border-orange-500 transition-colors duration-300"></textarea>
+                        <div>
+                            <label for="nom" class="mb-2 block text-sm font-semibold text-gray-200">Nom</label>
+                            <input id="nom" type="text" name="nom" autocomplete="name" placeholder="Votre nom" required
+                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="email" class="mb-2 block text-sm font-semibold text-gray-200">Courriel</label>
+                            <input id="email" type="email" name="email" autocomplete="email" placeholder="votre@courriel.com" required
+                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="date_mariage" class="mb-2 block text-sm font-semibold text-gray-200">Date du mariage</label>
+                            <input id="date_mariage" type="date" name="date_mariage" required
+                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="lieu" class="mb-2 block text-sm font-semibold text-gray-200">Lieu / ville</label>
+                            <input id="lieu" type="text" name="lieu" autocomplete="address-level2" placeholder="Lieu ou ville de la réception" required
+                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
+                        </div>
+                        <div>
+                            <label for="message" class="mb-2 block text-sm font-semibold text-gray-200">Message</label>
+                            <textarea id="message" name="message" placeholder="Parlez-moi de votre mariage" rows="4" required
+                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500"></textarea>
+                        </div>
                         <button type="submit"
-                            class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:-translate-y-1">Envoyer</button>
+                            class="w-full rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 py-4 text-white transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700 transform font-bold">Demander une soumission pour mon mariage</button>
                     </form>
                 </div>
             </div>
@@ -515,14 +532,14 @@
     <footer class="bg-black px-4 py-8 text-center text-gray-400">
         <p class="text-lg text-gray-300">DJ Steeve H. - DJ Professionnel à Québec</p>
         <p class="mt-2 text-sm">Spécialiste en musique Pop, Dance et Latino</p>
-        <a href="../index.html" class="mt-5 inline-block text-orange-400 transition-colors hover:text-orange-300">
+        <a href="/" class="mt-5 inline-block text-orange-400 transition-colors hover:text-orange-300">
             Retour à la page d'accueil
         </a>
         <p class="mt-5 text-sm">© 2025 DJ Steeve H. Tous droits réservés.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../main.js"></script>
+    <script src="/main.js"></script>
 </body>
 
 </html>
