@@ -1,0 +1,11 @@
+{
+  "name": "djsteeveh-site",
+  "private": true,
+  "description": "Build: npm run build:css (regenerate tailwind.css after any class change in the HTML, then commit it)",
+  "scripts": {
+    "build:css": "tailwindcss -i src/tailwind.css -o tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
