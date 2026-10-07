@@ -103,8 +103,6 @@
     }
     </script>
     <link rel="stylesheet" href="/tailwind.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-191XV8D4B1"></script>
 </head>
 
@@ -177,7 +175,10 @@
                 <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
                     data-aos-delay="100">
                     <div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
-                        <img src="mariage.jpg" alt="DJ pour mariage" class="w-full h-full object-cover" width="1152" height="896" loading="lazy">
+                        <picture>
+                            <source type="image/webp" srcset="mariage-480.webp 480w, mariage-800.webp 800w" sizes="(min-width: 768px) 30vw, calc(100vw - 96px)">
+                            <img src="mariage.jpg" alt="DJ pour mariage" class="w-full h-full object-cover" width="1152" height="896" loading="lazy">
+                        </picture>
                     </div>
                     <h3 class="text-3xl text-orange-500 mb-4">Mariages</h3>
                     <p class="text-gray-300">Créez des souvenirs magiques pour votre grand jour ! En tant que
@@ -193,7 +194,10 @@
                 <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
                     data-aos-delay="200">
                     <div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
-                        <img src="corporatif.jpg" alt="DJ pour événement corporatif" class="w-full h-full object-cover" width="1152" height="896" loading="lazy">
+                        <picture>
+                            <source type="image/webp" srcset="corporatif-480.webp 480w, corporatif-800.webp 800w" sizes="(min-width: 768px) 30vw, calc(100vw - 96px)">
+                            <img src="corporatif.jpg" alt="DJ pour événement corporatif" class="w-full h-full object-cover" width="1152" height="896" loading="lazy">
+                        </picture>
                     </div>
                     <h3 class="text-3xl text-orange-500 mb-4">Événements Corporatifs</h3>
                     <p class="text-gray-300">De l'ambiance feutrée d'un 5 à 7 professionnel aux galas prestigieux, je
@@ -214,7 +218,10 @@
                 <div class="bg-black/50 p-8 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
                     data-aos-delay="300">
                     <div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
-                        <img src="soiree.jpg" alt="DJ pour soirée privée" class="w-full h-full object-cover" width="1152" height="896" loading="lazy">
+                        <picture>
+                            <source type="image/webp" srcset="soiree-480.webp 480w, soiree-800.webp 800w" sizes="(min-width: 768px) 30vw, calc(100vw - 96px)">
+                            <img src="soiree.jpg" alt="DJ pour soirée privée" class="w-full h-full object-cover" width="1152" height="896" loading="lazy">
+                        </picture>
                     </div>
                     <h3 class="text-3xl text-orange-500 mb-4">Anniversaires et soirées privées</h3>
                     <p class="text-gray-300">Que ce soit pour un anniversaire, une fête surprise ou une réunion entre
@@ -620,7 +627,7 @@
     </footer>
 
     <!-- Scripts loaded at end of body for proper initialization -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/vendor/aos.js"></script>
     <script src="main.js"></script>
 
 
