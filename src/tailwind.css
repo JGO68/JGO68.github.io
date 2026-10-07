@@ -1,3 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Single render-blocking stylesheet: Tailwind, then AOS, then site styles (same cascade order as before). */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "aos/dist/aos.css";
+@import "./styles.css";
