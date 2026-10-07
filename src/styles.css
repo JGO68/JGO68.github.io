@@ -82,39 +82,39 @@ section {
     transform: scale(1.05);
 }
 
-/* Hero entrance: starts immediately, without AOS and without opacity 0 (LCP).
+/* Hero entrance: starts immediately, without AOS and without opacity 0: a visible start keeps it an LCP candidate.
    Animates `translate` so Tailwind hover transforms keep working. */
 @keyframes hero-fade-right {
     from {
-        opacity: 0.6;
-        translate: -24px 0;
+        opacity: 0.3;
+        translate: -80px 0;
     }
 }
 
 @keyframes hero-fade-left {
     from {
-        opacity: 0.6;
-        translate: 24px 0;
+        opacity: 0.3;
+        translate: 80px 0;
     }
 }
 
 @keyframes hero-fade-up {
     from {
-        opacity: 0.6;
-        translate: 0 16px;
+        opacity: 0.3;
+        translate: 0 30px;
     }
 }
 
 .hero-fade-right {
-    animation: hero-fade-right 0.6s ease-out both;
+    animation: hero-fade-right 0.9s ease-out both;
 }
 
 .hero-fade-left {
-    animation: hero-fade-left 0.6s ease-out both;
+    animation: hero-fade-left 0.9s ease-out both;
 }
 
 .hero-fade-up {
-    animation: hero-fade-up 0.5s ease-out both;
+    animation: hero-fade-up 0.8s ease-out both;
 }
 
 .hero-delay-1 {
