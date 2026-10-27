@@ -1,12 +1,11 @@
 {%- comment -%}
   Formulaire de soumission, commun aux 7 pages. Paramètres :
-  langue (fr, en, es) ; style (accueil ou service) ; facultatifs : date (nom du
-  champ), date_libelle, lieu, message (textes d'exemple), bouton, entreprise,
-  type_evenement (true pour les afficher). Textes : _data/formulaire.yml.
+  langue (fr, en, es) ; style (accueil ou service) ; facultatifs : date_libelle,
+  lieu, message (textes d'exemple), bouton, entreprise, type_evenement (true pour
+  les afficher). Textes : _data/formulaire.yml.
 {%- endcomment -%}
 {%- assign t = site.data.formulaire[include.langue] -%}
 {%- assign champ = "w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500" -%}
-{%- assign date = include.date | default: "date_evenement" -%}
 <form data-preserve-query class="space-y-6" action="https://formspree.io/f/mgvevgdp" method="POST">
                         <div>
                             <label for="{{ t.nom.champ }}" class="mb-2 block text-sm font-semibold text-gray-200">{{ t.nom.libelle }}</label>
@@ -41,8 +40,8 @@
                         </div>
 {%- endif %}
                         <div>
-                            <label for="{{ date }}" class="mb-2 block text-sm font-semibold text-gray-200">{{ include.date_libelle | default: t.date }}</label>
-                            <input id="{{ date }}" type="date" name="{{ date }}" required
+                            <label for="date_evenement" class="mb-2 block text-sm font-semibold text-gray-200">{{ include.date_libelle | default: t.date }}</label>
+                            <input id="date_evenement" type="date" name="date_evenement" required
                                 class="{{ champ }}">
                         </div>
                         <div>

@@ -77,7 +77,7 @@ const PAGES = [
         chemin: '/dj-mariage-quebec/',
         ogImage: '/mariage.jpg',
         sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'avis', 'mixes', 'zone', 'contact'],
-        requis: ['nom', 'email', 'date_mariage', 'lieu', 'message'],
+        requis: ['nom', 'email', 'date_evenement', 'lieu', 'message'],
         bouton: 'Demander une soumission pour mon mariage'
     },
     {
