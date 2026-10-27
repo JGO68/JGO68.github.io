@@ -465,52 +465,7 @@ menu_projet: Votre soirée
                 </div>
 
                 <div class="mx-auto mt-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">
-                    <form data-preserve-query class="space-y-6" action="https://formspree.io/f/mgvevgdp" method="POST">
-                        <div>
-                            <label for="nom" class="mb-2 block text-sm font-semibold text-gray-200">Nom</label>
-                            <input id="nom" type="text" name="nom" autocomplete="name" placeholder="Votre nom" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="email" class="mb-2 block text-sm font-semibold text-gray-200">Courriel</label>
-                            <input id="email" type="email" name="email" autocomplete="email" placeholder="votre@courriel.com" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="date_evenement" class="mb-2 block text-sm font-semibold text-gray-200">Date de l'événement</label>
-                            <input id="date_evenement" type="date" name="date_evenement" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="lieu" class="mb-2 block text-sm font-semibold text-gray-200">Lieu / ville</label>
-                            <input id="lieu" type="text" name="lieu" autocomplete="address-level2" placeholder="Lieu ou ville de l'événement"
-                                required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="message" class="mb-2 block text-sm font-semibold text-gray-200">Message</label>
-                            <textarea id="message" name="message" placeholder="Parlez-moi de votre anniversaire" rows="4" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500"></textarea>
-                        </div>
-                        <div>
-                            <label for="provenance" class="mb-2 block text-sm font-semibold text-gray-200">Comment m’avez-vous trouvé ?</label>
-                            <select id="provenance" name="provenance"
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                                <option value="" selected disabled>Sélectionnez une option</option>
-                                <option value="recherche-google">Recherche Google</option>
-                                <option value="google-maps">Google Maps / fiche Google</option>
-                                <option value="facebook-instagram">Facebook / Instagram</option>
-                                <option value="recommandation">Recommandation / bouche-à-oreille</option>
-                                <option value="evenement">Vu à un événement</option>
-                                <option value="ia">ChatGPT ou autre IA</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <button type="submit"
-                            class="w-full transform rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700">
-                            Demander une soumission pour mon anniversaire
-                        </button>
-                    </form>
+                    {% include formulaire.html langue="fr" style="service" message="Parlez-moi de votre anniversaire" bouton="Demander une soumission pour mon anniversaire" %}
                 </div>
             </div>
         </section>

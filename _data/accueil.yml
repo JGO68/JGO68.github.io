@@ -1,0 +1,41 @@
+# Textes de l'en-tête et du pied de page des 3 accueils (_includes/accueil/).
+langues:
+  - { code: fr, url: / }
+  - { code: en, url: /index-en.html }
+  - { code: es, url: /index-es.html }
+fr:
+  mixes: Quelques-uns de mes mixes
+  menu:
+    - { ancre: accueil, libelle: Accueil, ordi: true }
+    - { ancre: services, libelle: Services }
+    - { ancre: avis, libelle: Avis }
+    - { ancre: mixes, libelle: Mixes, ordi: true }
+    - { ancre: contact, libelle: Contact }
+  titre: DJ Steeve H. - DJ Professionnel à Québec
+  specialite: Spécialiste en musique Pop, Dance et Latino
+  facebook: Suivez DJ Steeve H. sur Facebook
+  droits: Tous droits réservés.
+en:
+  mixes: Some of my mixes
+  menu:
+    - { ancre: home, libelle: Home, ordi: true }
+    - { ancre: services, libelle: Services }
+    - { ancre: reviews, libelle: Reviews }
+    - { ancre: mixes, libelle: Mixes, ordi: true }
+    - { ancre: contact, libelle: Contact }
+  titre: DJ Steeve H. - Professional DJ in Quebec City
+  specialite: Specialist in Pop, Dance and Latin Music
+  facebook: Follow DJ Steeve H. on Facebook
+  droits: All rights reserved.
+es:
+  mixes: Algunos de mis mixes
+  menu:
+    - { ancre: inicio, libelle: Inicio, ordi: true }
+    - { ancre: servicios, libelle: Servicios }
+    - { ancre: opiniones, libelle: Opiniones }
+    - { ancre: mixes, libelle: Mixes, ordi: true }
+    - { ancre: contacto, libelle: Contacto }
+  titre: DJ Steeve H. - DJ Profesional en Quebec
+  specialite: Especialista en música Pop, Dance y Latina
+  facebook: Sigue a DJ Steeve H. en Facebook
+  droits: Todos los derechos reservados.

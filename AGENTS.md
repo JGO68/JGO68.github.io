@@ -11,6 +11,10 @@ Pour les modifier, modifier le bloc, pas les pages :
 - `_includes/service/entete.html`, `pied.html`, `mixes.html` : en-tête, pied de page
   et section Mixes des pages services (`dj-*-quebec/`).
 - `_data/services.yml` : liste des pages services (liens du pied de page).
+- `_includes/formulaire.html` : formulaire de soumission des 7 pages ; textes FR / EN / ES
+  dans `_data/formulaire.yml`, particularités de chaque page dans les paramètres de l'include.
+- `_includes/accueil/entete.html`, `pied.html`, `mixes.html` : en-tête, pied de page et
+  section Mixes des 3 accueils ; textes dans `_data/accueil.yml`.
 
 Les pages qui utilisent ces blocs commencent par un en-tête `---` (front matter).
 Garder `layout: null` : sans lui, GitHub Pages ajouterait une mise en page par défaut.

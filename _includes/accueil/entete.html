@@ -1,0 +1,16 @@
+{%- comment -%} En-tête des 3 accueils. Paramètre : langue (fr, en, es). Textes : _data/accueil.yml. {%- endcomment -%}
+{%- assign t = site.data.accueil[include.langue] -%}
+<header class="fixed w-full z-50 backdrop-blur-md bg-black/70">
+        <nav class="container mx-auto flex justify-between items-center px-2 md:px-4 py-4 md:py-6 max-w-full">
+            <div class="flex gap-3 sm:gap-4">
+{%- for langue in site.data.accueil.langues %}
+                <a href="{{ langue.url }}" class="{% if langue.code == include.langue %}text-orange-500 font-bold{% else %}text-white hover:text-orange-500{% endif %}">{{ langue.code | upcase }}</a>
+{%- endfor %}
+            </div>
+            <ul class="flex gap-3 sm:gap-4 md:gap-8 text-white text-sm md:text-base">
+{%- for lien in t.menu %}
+                <li{% if lien.ordi %} class="hidden sm:block"{% endif %}><a href="#{{ lien.ancre }}" class="hover:text-orange-500 transition-colors duration-300">{{ lien.libelle }}</a></li>
+{%- endfor %}
+            </ul>
+        </nav>
+    </header>

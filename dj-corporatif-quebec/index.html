@@ -473,70 +473,7 @@ menu_projet: Votre événement
                 </div>
 
                 <div class="mx-auto mt-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">
-                    <form data-preserve-query class="space-y-6" action="https://formspree.io/f/mgvevgdp" method="POST">
-                        <div>
-                            <label for="nom" class="mb-2 block text-sm font-semibold text-gray-200">Nom</label>
-                            <input id="nom" type="text" name="nom" autocomplete="name" placeholder="Votre nom" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="email" class="mb-2 block text-sm font-semibold text-gray-200">Courriel</label>
-                            <input id="email" type="email" name="email" autocomplete="email" placeholder="votre@courriel.com" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="entreprise" class="mb-2 block text-sm font-semibold text-gray-200">Entreprise / organisation</label>
-                            <input id="entreprise" type="text" name="entreprise" autocomplete="organization"
-                                placeholder="Nom de votre entreprise ou organisation" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="type_evenement" class="mb-2 block text-sm font-semibold text-gray-200">Type d’événement</label>
-                            <select id="type_evenement" name="type_evenement" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                                <option value="" selected disabled>Sélectionnez un type d’événement</option>
-                                <option value="5-a-7">5 à 7</option>
-                                <option value="gala">Gala</option>
-                                <option value="soiree-d-entreprise">Soirée d’entreprise</option>
-                                <option value="party-de-noel">Party de Noël</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="date_evenement" class="mb-2 block text-sm font-semibold text-gray-200">Date de l’événement</label>
-                            <input id="date_evenement" type="date" name="date_evenement" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="lieu" class="mb-2 block text-sm font-semibold text-gray-200">Lieu / ville</label>
-                            <input id="lieu" type="text" name="lieu" autocomplete="address-level2" placeholder="Lieu ou ville de l'événement"
-                                required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="message" class="mb-2 block text-sm font-semibold text-gray-200">Message</label>
-                            <textarea id="message" name="message" placeholder="Parlez-moi de votre entreprise et de l’ambiance recherchée pour votre événement" rows="4" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500"></textarea>
-                        </div>
-                        <div>
-                            <label for="provenance" class="mb-2 block text-sm font-semibold text-gray-200">Comment m’avez-vous trouvé ?</label>
-                            <select id="provenance" name="provenance"
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                                <option value="" selected disabled>Sélectionnez une option</option>
-                                <option value="recherche-google">Recherche Google</option>
-                                <option value="google-maps">Google Maps / fiche Google</option>
-                                <option value="facebook-instagram">Facebook / Instagram</option>
-                                <option value="recommandation">Recommandation / bouche-à-oreille</option>
-                                <option value="evenement">Vu à un événement</option>
-                                <option value="ia">ChatGPT ou autre IA</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <button type="submit"
-                            class="w-full transform rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700">
-                            Demander une soumission pour notre événement
-                        </button>
-                    </form>
+                    {% include formulaire.html langue="fr" style="service" entreprise=true type_evenement=true date_libelle="Date de l’événement" message="Parlez-moi de votre entreprise et de l’ambiance recherchée pour votre événement" bouton="Demander une soumission pour notre événement" %}
                     <p class="mt-6 text-center text-gray-300">
                         Vous préférez appeler? <a href="tel:+14184313229"
                             class="font-semibold text-orange-400 transition-colors hover:text-orange-300">(418) 431-3229</a>
