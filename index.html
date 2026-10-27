@@ -110,16 +110,16 @@
     <!-- Header with Glassmorphism -->
     <header class="fixed w-full z-50 backdrop-blur-md bg-black/70">
         <nav class="container mx-auto flex justify-between items-center px-2 md:px-4 py-4 md:py-6 max-w-full">
-            <div class="flex space-x-4">
+            <div class="flex gap-3 sm:gap-4">
                 <a href="/" class="text-orange-500 font-bold">FR</a>
                 <a href="/index-en.html" class="text-white hover:text-orange-500">EN</a>
                 <a href="/index-es.html" class="text-white hover:text-orange-500">ES</a>
             </div>
-            <ul class="flex space-x-4 md:space-x-8 text-white text-sm md:text-base">
-                <li><a href="#accueil" class="hover:text-orange-500 transition-colors duration-300">Accueil</a></li>
+            <ul class="flex gap-3 sm:gap-4 md:gap-8 text-white text-sm md:text-base">
+                <li class="hidden sm:block"><a href="#accueil" class="hover:text-orange-500 transition-colors duration-300">Accueil</a></li>
                 <li><a href="#services" class="hover:text-orange-500 transition-colors duration-300">Services</a></li>
                 <li><a href="#avis" class="hover:text-orange-500 transition-colors duration-300">Avis</a></li>
-                <li><a href="#mixes" class="hover:text-orange-500 transition-colors duration-300">Mixes</a></li>
+                <li class="hidden sm:block"><a href="#mixes" class="hover:text-orange-500 transition-colors duration-300">Mixes</a></li>
                 <li><a href="#contact" class="hover:text-orange-500 transition-colors duration-300">Contact</a></li>
             </ul>
         </nav>
@@ -597,7 +597,7 @@
                 <p class="text-xl mb-4">Pour me joindre, vous pouvez :</p>
                 <p class="text-xl mb-6">
                     M'appeler directement au <a href="tel:+14184313229"
-                        class="text-orange-500 hover:text-orange-400 transition-colors duration-300 whitespace-nowrap">(418)
+                        class="text-orange-500 underline underline-offset-2 hover:text-orange-400 transition-colors duration-300 whitespace-nowrap">(418)
                         431-3229</a>
                     <br>ou<br>
                     Compléter le formulaire ci-dessous
