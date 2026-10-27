@@ -1,0 +1,56 @@
+# Textes du formulaire de soumission (_includes/formulaire.html), par langue.
+# Les noms de champs (champ) sont ceux reçus dans les courriels Formspree.
+fr:
+  nom: { champ: nom, libelle: Nom, exemple: Votre nom }
+  email: { libelle: Courriel, exemple: votre@courriel.com }
+  date: Date de l'événement
+  lieu: { libelle: Lieu / ville, exemple: Lieu ou ville de l'événement }
+  message: { champ: message, libelle: Message, exemple: Parlez-moi de votre événement }
+  bouton: Envoyer
+  provenance:
+    libelle: Comment m’avez-vous trouvé ?
+    choix: Sélectionnez une option
+    options:
+      - { valeur: recherche-google, libelle: Recherche Google }
+      - { valeur: google-maps, libelle: Google Maps / fiche Google }
+      - { valeur: facebook-instagram, libelle: Facebook / Instagram }
+      - { valeur: recommandation, libelle: Recommandation / bouche-à-oreille }
+      - { valeur: evenement, libelle: Vu à un événement }
+      - { valeur: ia, libelle: ChatGPT ou autre IA }
+      - { valeur: autre, libelle: Autre }
+en:
+  nom: { champ: name, libelle: Name, exemple: Your name }
+  email: { libelle: Email, exemple: your@email.com }
+  date: Event date
+  lieu: { libelle: Venue / city, exemple: Venue or city of the event }
+  message: { champ: message, libelle: Message, exemple: Tell me about your event }
+  bouton: Send
+  provenance:
+    libelle: How did you find me?
+    choix: Select an option
+    options:
+      - { valeur: recherche-google, libelle: Google search }
+      - { valeur: google-maps, libelle: Google Maps }
+      - { valeur: facebook-instagram, libelle: Facebook / Instagram }
+      - { valeur: recommandation, libelle: Referral / word of mouth }
+      - { valeur: evenement, libelle: Saw me at an event }
+      - { valeur: ia, libelle: ChatGPT or another AI }
+      - { valeur: autre, libelle: Other }
+es:
+  nom: { champ: nombre, libelle: Nombre, exemple: Su nombre }
+  email: { libelle: Correo electrónico, exemple: su@correo.com }
+  date: Fecha del evento
+  lieu: { libelle: Lugar / ciudad, exemple: Lugar o ciudad del evento }
+  message: { champ: mensaje, libelle: Mensaje, exemple: Cuénteme sobre su evento }
+  bouton: Enviar
+  provenance:
+    libelle: ¿Cómo me encontró?
+    choix: Seleccione una opción
+    options:
+      - { valeur: recherche-google, libelle: Búsqueda en Google }
+      - { valeur: google-maps, libelle: Google Maps }
+      - { valeur: facebook-instagram, libelle: Facebook / Instagram }
+      - { valeur: recommandation, libelle: Recomendación }
+      - { valeur: evenement, libelle: Me vio en un evento }
+      - { valeur: ia, libelle: ChatGPT u otra IA }
+      - { valeur: autre, libelle: Otro }

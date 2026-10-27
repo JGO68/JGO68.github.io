@@ -6,6 +6,15 @@ body {
     overflow-x: hidden;
 }
 
+/* Empêche le dézoom et le glissement latéral sur téléphone : les navigateurs
+   mobiles ignorent overflow-x: hidden sur body pour la largeur de la page.
+   clip ne crée pas de zone de défilement (le défilement de la fenêtre, dont
+   dépend AOS, reste intact). Navigateurs anciens : la règle hidden ci-dessus. */
+html,
+body {
+    overflow-x: clip;
+}
+
 select {
     color-scheme: dark;
 }

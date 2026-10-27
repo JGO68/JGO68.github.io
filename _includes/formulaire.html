@@ -1,0 +1,74 @@
+{%- comment -%}
+  Formulaire de soumission, commun aux 7 pages. Paramètres :
+  langue (fr, en, es) ; style (accueil ou service) ; facultatifs : date_libelle,
+  lieu, message (textes d'exemple), bouton, entreprise, type_evenement (true pour
+  les afficher). Textes : _data/formulaire.yml.
+{%- endcomment -%}
+{%- assign t = site.data.formulaire[include.langue] -%}
+{%- assign champ = "w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500" -%}
+<form data-preserve-query class="space-y-6" action="https://formspree.io/f/mgvevgdp" method="POST">
+                        <div>
+                            <label for="{{ t.nom.champ }}" class="mb-2 block text-sm font-semibold text-gray-200">{{ t.nom.libelle }}</label>
+                            <input id="{{ t.nom.champ }}" type="text" name="{{ t.nom.champ }}" autocomplete="name" placeholder="{{ t.nom.exemple }}" required
+                                class="{{ champ }}">
+                        </div>
+                        <div>
+                            <label for="email" class="mb-2 block text-sm font-semibold text-gray-200">{{ t.email.libelle }}</label>
+                            <input id="email" type="email" name="email" autocomplete="email" placeholder="{{ t.email.exemple }}" required
+                                class="{{ champ }}">
+                        </div>
+{%- if include.entreprise %}
+                        <div>
+                            <label for="entreprise" class="mb-2 block text-sm font-semibold text-gray-200">Entreprise / organisation</label>
+                            <input id="entreprise" type="text" name="entreprise" autocomplete="organization"
+                                placeholder="Nom de votre entreprise ou organisation" required
+                                class="{{ champ }}">
+                        </div>
+{%- endif %}
+{%- if include.type_evenement %}
+                        <div>
+                            <label for="type_evenement" class="mb-2 block text-sm font-semibold text-gray-200">Type d’événement</label>
+                            <select id="type_evenement" name="type_evenement" required
+                                class="{{ champ }}">
+                                <option value="" selected disabled>Sélectionnez un type d’événement</option>
+                                <option value="5-a-7">5 à 7</option>
+                                <option value="gala">Gala</option>
+                                <option value="soiree-d-entreprise">Soirée d’entreprise</option>
+                                <option value="party-de-noel">Party de Noël</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+{%- endif %}
+                        <div>
+                            <label for="date_evenement" class="mb-2 block text-sm font-semibold text-gray-200">{{ include.date_libelle | default: t.date }}</label>
+                            <input id="date_evenement" type="date" name="date_evenement" required
+                                class="{{ champ }}">
+                        </div>
+                        <div>
+                            <label for="lieu" class="mb-2 block text-sm font-semibold text-gray-200">{{ t.lieu.libelle }}</label>
+                            <input id="lieu" type="text" name="lieu" autocomplete="address-level2" placeholder="{{ include.lieu | default: t.lieu.exemple }}" required
+                                class="{{ champ }}">
+                        </div>
+                        <div>
+                            <label for="{{ t.message.champ }}" class="mb-2 block text-sm font-semibold text-gray-200">{{ t.message.libelle }}</label>
+                            <textarea id="{{ t.message.champ }}" name="{{ t.message.champ }}" placeholder="{{ include.message | default: t.message.exemple }}" rows="4" required
+                                class="{{ champ }}"></textarea>
+                        </div>
+                        <div>
+                            <label for="provenance" class="mb-2 block text-sm font-semibold text-gray-200">{{ t.provenance.libelle }}</label>
+                            <select id="provenance" name="provenance"
+                                class="{{ champ }}">
+                                <option value="" selected disabled>{{ t.provenance.choix }}</option>
+{%- for option in t.provenance.options %}
+                                <option value="{{ option.valeur }}">{{ option.libelle }}</option>
+{%- endfor %}
+                            </select>
+                        </div>
+{%- if include.style == "accueil" %}
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:-translate-y-1">{{ include.bouton | default: t.bouton }}</button>
+{%- else %}
+                        <button type="submit"
+                            class="w-full transform rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700">{{ include.bouton | default: t.bouton }}</button>
+{%- endif %}
+                    </form>

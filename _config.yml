@@ -1,0 +1,16 @@
+# Configuration Jekyll (GitHub Pages compile le site avec Jekyll).
+# Fichiers de développement et de tests : jamais publiés sur djsteeveh.com.
+exclude:
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - playwright.config.js
+  - src/
+  - tests/
+  - test-results/
+  - playwright-report/
+  - AGENTS.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock

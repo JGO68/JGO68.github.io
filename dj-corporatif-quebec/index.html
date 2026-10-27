@@ -1,3 +1,11 @@
+---
+layout: null
+menu_projet: Votre événement
+zone:
+  texte: >-
+    Vous cherchez un DJ corporatif à Lévis ou dans la grande région de Québec pour une soirée d'entreprise, un gala ou un autre événement professionnel? Indiquez la ville et le lieu dans le formulaire pour donner le bon contexte à votre demande.
+  anti_debordement: true
+---
 <!DOCTYPE html>
 <html lang="fr-CA">
 
@@ -31,7 +39,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/tailwind.css">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-191XV8D4B1"></script>
+    {% include analytics.html %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -120,40 +128,7 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <nav class="container mx-auto flex items-center justify-between gap-4 px-4 py-4 lg:px-8"
-            aria-label="Navigation principale">
-            <a href="/" class="shrink-0 text-lg font-bold tracking-tight text-orange-500 sm:text-xl"
-                aria-label="Retour à l'accueil de DJ Steeve H.">
-                DJ Steeve H.
-            </a>
-
-            <div class="hidden items-center gap-6 text-sm text-gray-200 md:flex">
-                <a href="/" class="transition-colors hover:text-orange-400">Accueil</a>
-                <a href="#sur-mesure" class="transition-colors hover:text-orange-400">Votre événement</a>
-                <a href="#avis" class="transition-colors hover:text-orange-400">Avis</a>
-                <a href="#mixes" class="transition-colors hover:text-orange-400">Mixes</a>
-                <a href="#contact" class="transition-colors hover:text-orange-400">Soumission</a>
-            </div>
-
-            <div class="flex items-center gap-2 sm:gap-3">
-                <div class="flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wide"
-                    aria-label="Choix de langue">
-                    <a href="/dj-corporatif-quebec/" class="text-orange-400" aria-current="page">FR</a>
-                    <a href="/index-en.html" class="text-gray-300 transition-colors hover:text-orange-400">EN</a>
-                    <a href="/index-es.html" class="text-gray-300 transition-colors hover:text-orange-400">ES</a>
-                </div>
-                <a href="tel:+14184313229"
-                    class="hidden whitespace-nowrap rounded-lg border border-orange-500/40 px-3 py-2 text-sm text-orange-300 transition-colors hover:border-orange-400 hover:text-orange-200 sm:inline-flex">
-                    (418) 431-3229
-                </a>
-                <a href="#contact"
-                    class="whitespace-nowrap rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-3 py-2 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:from-orange-600 hover:to-orange-700 sm:px-4">
-                    Soumission
-                </a>
-            </div>
-        </nav>
-    </header>
+    {% include service/entete.html %}
 
     <main>
         <section id="accueil"
@@ -390,65 +365,7 @@
                 </div>
 
                 <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="100">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">C</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Cyndie Feltz</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"DJ professionnel, fiable et qui sait écouter les attentes de ses clients. Je recommande!"</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">C</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Criseida Euan</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Ses choix musicaux sont excellents. Je le recommande fortement."</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">S</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Sylvie Herpin</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Steeve est très professionnel ! Je le recommande fortement !"</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="400">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">Y</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Yann Cochennec</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Excellent DJ, je recommande chaudement !"</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="500">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">G</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Gihane Makni</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Très bon DJ avec du bon son qui vous fait oublier la douleur de vos talons aiguilles et vous entraîne à rester sur la piste de danse car à chaque fois ses chansons sont trop bonnes!!! 🎉💃"</p>
-                    </blockquote>
+                    {% include avis.html langue="fr" style="service" liste="cyndie,criseida,sylvie,yann,gihane" %}
                 </div>
 
                 <div class="mt-10 text-center" data-aos="fade-up">
@@ -460,78 +377,9 @@
             </div>
         </section>
 
-        <section id="mixes" class="bg-gradient-to-b from-gray-900 to-black px-4 py-20 sm:px-6 md:py-28">
-            <div class="container mx-auto max-w-6xl">
-                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">À écouter</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-                        Quelques-uns de mes mixes
-                    </h2>
-                    <p class="mt-6 text-lg leading-relaxed text-gray-300">
-                        Découvrez quelques mixes de DJ Steeve H. pour vous faire une idée de son univers musical.
-                    </p>
-                </div>
+        {% include service/mixes.html %}
 
-                <div class="mt-12 grid gap-8 md:grid-cols-3">
-                    <article class="rounded-xl bg-black/50 p-4 backdrop-blur-md transition-transform hover:-translate-y-1"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-full overflow-hidden rounded-lg">
-                            <iframe width="100%" height="120" title="DJ Steeve H. - Shaker Mix"
-                                src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2022-04-22-shaker-mix/&hide_cover=1&light=0"
-                                frameborder="0" allow="autoplay" loading="lazy">
-                            </iframe>
-                        </div>
-                    </article>
-
-                    <article class="rounded-xl bg-black/50 p-4 backdrop-blur-md transition-transform hover:-translate-y-1"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-full overflow-hidden rounded-lg">
-                            <iframe width="100%" height="120" title="DJ Steeve H. - Mix de Reprise"
-                                src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2024-10-20-mix-de-reprise/&hide_cover=1&light=0"
-                                frameborder="0" allow="autoplay" loading="lazy">
-                            </iframe>
-                        </div>
-                    </article>
-
-                    <article class="rounded-xl bg-black/50 p-4 backdrop-blur-md transition-transform hover:-translate-y-1"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-full overflow-hidden rounded-lg">
-                            <iframe width="100%" height="120" title="DJ Steeve H. - Tommy Hilfiger Mix"
-                                src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2022-04-22-mix-tommy-hilfiger/&hide_cover=1&light=0"
-                                frameborder="0" allow="autoplay" loading="lazy">
-                            </iframe>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="zone" class="overflow-hidden bg-orange-950/50 px-4 py-20 sm:px-6 md:py-28">
-            <div class="container mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-                <div class="min-w-0" data-aos="fade-right">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-300">Québec et les environs</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-                        Un service dans la grande région de Québec
-                    </h2>
-                    <p class="mt-6 text-lg leading-relaxed text-gray-200">
-                        Vous cherchez un DJ corporatif à Lévis ou dans la grande région de Québec pour une soirée d'entreprise, un gala ou un autre événement professionnel? Indiquez la ville et le lieu dans le formulaire pour donner le bon contexte à votre demande.
-                    </p>
-                </div>
-
-                <div class="min-w-0 rounded-2xl border border-orange-300/20 bg-black/40 p-7" data-aos="fade-left">
-                    <h3 class="text-xl font-semibold text-white">Secteurs desservis</h3>
-                    <ul class="mt-5 grid grid-cols-2 gap-3 text-gray-300 sm:grid-cols-3 lg:grid-cols-2">
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Québec</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Lévis</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Beauport</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Charlesbourg</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Sainte-Foy</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Cap-Rouge</li>
-                        <li class="col-span-2 rounded-lg bg-white/5 px-3 py-2 sm:col-span-1 lg:col-span-2">L'Ancienne-Lorette</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        {% include service/zone.html %}
 
         <section id="contact" class="bg-black px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto max-w-3xl">
@@ -546,70 +394,7 @@
                 </div>
 
                 <div class="mx-auto mt-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">
-                    <form data-preserve-query class="space-y-6" action="https://formspree.io/f/mgvevgdp" method="POST">
-                        <div>
-                            <label for="nom" class="mb-2 block text-sm font-semibold text-gray-200">Nom</label>
-                            <input id="nom" type="text" name="nom" autocomplete="name" placeholder="Votre nom" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="email" class="mb-2 block text-sm font-semibold text-gray-200">Courriel</label>
-                            <input id="email" type="email" name="email" autocomplete="email" placeholder="votre@courriel.com" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="entreprise" class="mb-2 block text-sm font-semibold text-gray-200">Entreprise / organisation</label>
-                            <input id="entreprise" type="text" name="entreprise" autocomplete="organization"
-                                placeholder="Nom de votre entreprise ou organisation" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="type_evenement" class="mb-2 block text-sm font-semibold text-gray-200">Type d’événement</label>
-                            <select id="type_evenement" name="type_evenement" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                                <option value="" selected disabled>Sélectionnez un type d’événement</option>
-                                <option value="5-a-7">5 à 7</option>
-                                <option value="gala">Gala</option>
-                                <option value="soiree-d-entreprise">Soirée d’entreprise</option>
-                                <option value="party-de-noel">Party de Noël</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="date_evenement" class="mb-2 block text-sm font-semibold text-gray-200">Date de l’événement</label>
-                            <input id="date_evenement" type="date" name="date_evenement" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="lieu" class="mb-2 block text-sm font-semibold text-gray-200">Lieu / ville</label>
-                            <input id="lieu" type="text" name="lieu" autocomplete="address-level2" placeholder="Lieu ou ville de l'événement"
-                                required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                        </div>
-                        <div>
-                            <label for="message" class="mb-2 block text-sm font-semibold text-gray-200">Message</label>
-                            <textarea id="message" name="message" placeholder="Parlez-moi de votre entreprise et de l’ambiance recherchée pour votre événement" rows="4" required
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500"></textarea>
-                        </div>
-                        <div>
-                            <label for="provenance" class="mb-2 block text-sm font-semibold text-gray-200">Comment m’avez-vous trouvé ?</label>
-                            <select id="provenance" name="provenance"
-                                class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
-                                <option value="" selected disabled>Sélectionnez une option</option>
-                                <option value="recherche-google">Recherche Google</option>
-                                <option value="google-maps">Google Maps / fiche Google</option>
-                                <option value="facebook-instagram">Facebook / Instagram</option>
-                                <option value="recommandation">Recommandation / bouche-à-oreille</option>
-                                <option value="evenement">Vu à un événement</option>
-                                <option value="ia">ChatGPT ou autre IA</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <button type="submit"
-                            class="w-full transform rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700">
-                            Demander une soumission pour notre événement
-                        </button>
-                    </form>
+                    {% include formulaire.html langue="fr" style="service" entreprise=true type_evenement=true date_libelle="Date de l’événement" message="Parlez-moi de votre entreprise et de l’ambiance recherchée pour votre événement" bouton="Demander une soumission pour notre événement" %}
                     <p class="mt-6 text-center text-gray-300">
                         Vous préférez appeler? <a href="tel:+14184313229"
                             class="font-semibold text-orange-400 transition-colors hover:text-orange-300">(418) 431-3229</a>
@@ -619,19 +404,7 @@
         </section>
     </main>
 
-    <footer class="bg-black px-4 py-8 text-center text-gray-400">
-        <p class="text-lg text-gray-300">DJ Steeve H. - DJ Professionnel à Québec</p>
-        <p class="mt-2 text-sm">Spécialiste en musique Pop, Dance et Latino</p>
-        <a href="/" class="mt-5 inline-block text-orange-400 transition-colors hover:text-orange-300">
-            Retour à la page d'accueil
-        </a>
-        <nav aria-label="Autres services" class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-orange-400">
-            <a href="/dj-mariage-quebec/" class="transition-colors hover:text-orange-300">DJ de mariage à Québec</a>
-            <a href="/dj-anniversaire-quebec/" class="transition-colors hover:text-orange-300">DJ d'anniversaire à Québec</a>
-            <a href="/dj-party-noel-quebec/" class="transition-colors hover:text-orange-300">DJ pour party de Noël à Québec</a>
-        </nav>
-        <p class="mt-5 text-sm">© 2025 DJ Steeve H. Tous droits réservés.</p>
-    </footer>
+    {% include service/pied.html %}
 
     <script src="/vendor/aos.js"></script>
     <script src="/main.js"></script>
