@@ -15,6 +15,10 @@ Pour les modifier, modifier le bloc, pas les pages :
   dans `_data/formulaire.yml`, particularités de chaque page dans les paramètres de l'include.
 - `_includes/accueil/entete.html`, `pied.html`, `mixes.html` : en-tête, pied de page et
   section Mixes des 3 accueils ; textes dans `_data/accueil.yml`.
+- `_includes/avis.html` : avis clients des 7 pages ; textes FR / EN / ES dans `_data/avis.yml`,
+  avis affichés (et leur ordre) choisis par chaque page dans le paramètre `liste`.
+- `_includes/service/zone.html` : section « zone desservie » des pages services ;
+  paragraphe propre à chaque page dans son front matter (`zone.texte`).
 
 Les pages qui utilisent ces blocs commencent par un en-tête `---` (front matter).
 Garder `layout: null` : sans lui, GitHub Pages ajouterait une mise en page par défaut.

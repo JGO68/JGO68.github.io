@@ -1,6 +1,10 @@
 ---
 layout: null
 menu_projet: Votre événement
+zone:
+  texte: >-
+    Vous cherchez un DJ corporatif à Lévis ou dans la grande région de Québec pour une soirée d'entreprise, un gala ou un autre événement professionnel? Indiquez la ville et le lieu dans le formulaire pour donner le bon contexte à votre demande.
+  anti_debordement: true
 ---
 <!DOCTYPE html>
 <html lang="fr-CA">
@@ -361,65 +365,7 @@ menu_projet: Votre événement
                 </div>
 
                 <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="100">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">C</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Cyndie Feltz</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"DJ professionnel, fiable et qui sait écouter les attentes de ses clients. Je recommande!"</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">C</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Criseida Euan</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Ses choix musicaux sont excellents. Je le recommande fortement."</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">S</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Sylvie Herpin</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Steeve est très professionnel ! Je le recommande fortement !"</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="400">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">Y</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Yann Cochennec</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Excellent DJ, je recommande chaudement !"</p>
-                    </blockquote>
-
-                    <blockquote class="rounded-xl border border-orange-500/20 bg-black/50 p-6 backdrop-blur-md" data-aos="fade-up"
-                        data-aos-delay="500">
-                        <div class="mb-4 flex items-center">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">G</div>
-                            <div class="ml-4">
-                                <h3 class="font-semibold text-white">Gihane Makni</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 italic">"Très bon DJ avec du bon son qui vous fait oublier la douleur de vos talons aiguilles et vous entraîne à rester sur la piste de danse car à chaque fois ses chansons sont trop bonnes!!! 🎉💃"</p>
-                    </blockquote>
+                    {% include avis.html langue="fr" style="service" liste="cyndie,criseida,sylvie,yann,gihane" %}
                 </div>
 
                 <div class="mt-10 text-center" data-aos="fade-up">
@@ -433,32 +379,7 @@ menu_projet: Votre événement
 
         {% include service/mixes.html %}
 
-        <section id="zone" class="overflow-hidden bg-orange-950/50 px-4 py-20 sm:px-6 md:py-28">
-            <div class="container mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-                <div class="min-w-0" data-aos="fade-right">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-300">Québec et les environs</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-                        Un service dans la grande région de Québec
-                    </h2>
-                    <p class="mt-6 text-lg leading-relaxed text-gray-200">
-                        Vous cherchez un DJ corporatif à Lévis ou dans la grande région de Québec pour une soirée d'entreprise, un gala ou un autre événement professionnel? Indiquez la ville et le lieu dans le formulaire pour donner le bon contexte à votre demande.
-                    </p>
-                </div>
-
-                <div class="min-w-0 rounded-2xl border border-orange-300/20 bg-black/40 p-7" data-aos="fade-left">
-                    <h3 class="text-xl font-semibold text-white">Secteurs desservis</h3>
-                    <ul class="mt-5 grid grid-cols-2 gap-3 text-gray-300 sm:grid-cols-3 lg:grid-cols-2">
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Québec</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Lévis</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Beauport</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Charlesbourg</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Sainte-Foy</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Cap-Rouge</li>
-                        <li class="col-span-2 rounded-lg bg-white/5 px-3 py-2 sm:col-span-1 lg:col-span-2">L'Ancienne-Lorette</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        {% include service/zone.html %}
 
         <section id="contact" class="bg-black px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto max-w-3xl">

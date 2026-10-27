@@ -1,0 +1,39 @@
+# Avis Google des clients, publiés sur le site (_includes/avis.html).
+# Chaque page choisit les siens et leur ordre (paramètre liste de l'include).
+# Texte sans guillemets : ils sont ajoutés à l'affichage.
+- id: alexandra
+  nom: Alexandra Boulanger
+  texte:
+    fr: 'Steeve a participé à la réussite de notre Party de Noël, en mettant de l''ambiance avec sa musique, tout en respectant les demandes spéciales de ma gang !'
+    en: 'Steeve contributed to the success of our Christmas Party, setting the mood with his music while respecting my team''s special requests!'
+    es: '¡Steeve contribuyó al éxito de nuestra Fiesta de Navidad, creando el ambiente con su música mientras respetaba las solicitudes especiales de mi equipo!'
+- id: gihane
+  nom: Gihane Makni
+  texte:
+    fr: 'Très bon DJ avec du bon son qui vous fait oublier la douleur de vos talons aiguilles et vous entraîne à rester sur la piste de danse car à chaque fois ses chansons sont trop bonnes!!! 🎉💃'
+    en: 'Great DJ with awesome sound that makes you forget your high heels and keeps you on the dance floor because every song is just too good! 🎉💃'
+    es: '¡Muy buen DJ con excelente sonido que te hace olvidar tus tacones altos y te mantiene en la pista de baile porque cada canción es demasiado buena! 🎉💃'
+- id: cyndie
+  nom: Cyndie Feltz
+  texte:
+    fr: 'DJ professionnel, fiable et qui sait écouter les attentes de ses clients. Je recommande!'
+    en: 'Professional DJ, reliable and who knows how to listen to his clients'' expectations. I recommend!'
+    es: 'DJ profesional, confiable y que sabe escuchar las expectativas de sus clientes. ¡Lo recomiendo!'
+- id: criseida
+  nom: Criseida Euan
+  texte:
+    fr: 'Ses choix musicaux sont excellents. Je le recommande fortement.'
+    en: 'His music choices are excellent. I highly recommend him.'
+    es: 'Sus elecciones musicales son excelentes. Lo recomiendo ampliamente.'
+- id: yann
+  nom: Yann Cochennec
+  texte:
+    fr: 'Excellent DJ, je recommande chaudement !'
+    en: 'Excellent DJ, I warmly recommend!'
+    es: '¡Excelente DJ, lo recomiendo calurosamente!'
+- id: sylvie
+  nom: Sylvie Herpin
+  texte:
+    fr: 'Steeve est très professionnel ! Je le recommande fortement !'
+    en: 'Steeve is very professional! I highly recommend him!'
+    es: '¡Steeve es muy profesional! ¡Lo recomiendo ampliamente!'
