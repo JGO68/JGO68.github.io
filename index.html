@@ -630,6 +630,20 @@
                         <textarea id="message" name="message" placeholder="Parlez-moi de votre événement" rows="4" required
                             class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500"></textarea>
                     </div>
+                    <div>
+                        <label for="provenance" class="mb-2 block text-sm font-semibold text-gray-200">Comment m’avez-vous trouvé ?</label>
+                        <select id="provenance" name="provenance" required
+                            class="w-full rounded-lg border border-orange-500/30 bg-gray-800/50 p-4 text-white transition-colors duration-300 focus:border-orange-500">
+                            <option value="" selected disabled>Sélectionnez une option</option>
+                            <option value="recherche-google">Recherche Google</option>
+                            <option value="google-maps">Google Maps / fiche Google</option>
+                            <option value="facebook-instagram">Facebook / Instagram</option>
+                            <option value="recommandation">Recommandation / bouche-à-oreille</option>
+                            <option value="evenement">Vu à un événement</option>
+                            <option value="ia">ChatGPT ou autre IA</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
                     <button type="submit"
                         class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-4 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:-translate-y-1">Envoyer</button>
                 </form>

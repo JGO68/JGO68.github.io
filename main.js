@@ -21,27 +21,94 @@ const ALLOWED_QUERY_PARAMETERS = [
 // Longueur maximale conservée pour chaque valeur.
 const MAX_QUERY_VALUE_LENGTH = 200;
 
-// Keep Google Ads and other campaign parameters available to Formspree submissions.
-function preserveQueryParameters() {
-    if (!window.location.search) {
-        return;
+// Clé localStorage : la provenance est gardée entre les pages et les visites.
+const ATTRIBUTION_STORAGE_KEY = 'djsh_provenance';
+
+// Durée de conservation : 90 jours, comme la validité d'un gclid Google Ads.
+const ATTRIBUTION_MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000;
+
+function truncateValue(value) {
+    return String(value).slice(0, MAX_QUERY_VALUE_LENGTH);
+}
+
+function readStoredAttribution() {
+    try {
+        const stored = JSON.parse(window.localStorage.getItem(ATTRIBUTION_STORAGE_KEY));
+        if (stored && Date.now() - stored.savedAt < ATTRIBUTION_MAX_AGE_MS) {
+            return stored;
+        }
+    } catch (error) {
+        // Stockage bloqué ou valeur illisible : on repart de zéro.
+    }
+    return null;
+}
+
+// Mémorise d'où vient le visiteur. Une nouvelle source externe (paramètres de
+// campagne ou site référent) remplace l'ancienne; une navigation interne ou une
+// visite directe garde la dernière source connue.
+function recordAttribution() {
+    const campaign = {};
+    new URLSearchParams(window.location.search).forEach(function(value, key) {
+        if (ALLOWED_QUERY_PARAMETERS.includes(key)) {
+            campaign[key] = truncateValue(value);
+        }
+    });
+
+    let referrer = '';
+    try {
+        const referrerHost = new URL(document.referrer).hostname;
+        if (referrerHost !== window.location.hostname) {
+            referrer = truncateValue(referrerHost);
+        }
+    } catch (error) {
+        // Pas de référent (visite directe, application, courriel...).
     }
 
-    const forms = document.querySelectorAll('form[data-preserve-query]');
-    const params = new URLSearchParams(window.location.search);
+    const stored = readStoredAttribution();
+    if (stored && Object.keys(campaign).length === 0 && !referrer) {
+        return stored;
+    }
 
-    forms.forEach(function(form) {
-        params.forEach(function(value, key) {
-            // Rejette les clés hors liste blanche et les champs déjà présents.
-            if (!ALLOWED_QUERY_PARAMETERS.includes(key) || form.elements.namedItem(key)) {
+    const attribution = {
+        savedAt: Date.now(),
+        campaign: campaign,
+        referrer: referrer || '(direct)',
+        landingPage: truncateValue(window.location.pathname)
+    };
+    try {
+        window.localStorage.setItem(ATTRIBUTION_STORAGE_KEY, JSON.stringify(attribution));
+    } catch (error) {
+        // Stockage bloqué : la provenance vaut seulement pour cette page.
+    }
+    return attribution;
+}
+
+// Ajoute la provenance aux formulaires Formspree en champs cachés. Les noms de
+// champs sont fixes (liste blanche ci-dessus), jamais tirés de l'URL.
+function addAttributionFields() {
+    const attribution = recordAttribution();
+    const fields = {};
+    // Revalide les clés relues du stockage contre la liste blanche.
+    ALLOWED_QUERY_PARAMETERS.forEach(function(key) {
+        if (attribution.campaign && attribution.campaign[key]) {
+            fields[key] = truncateValue(attribution.campaign[key]);
+        }
+    });
+    fields.site_referent = truncateValue(attribution.referrer || '(direct)');
+    fields.page_arrivee = truncateValue(attribution.landingPage || '');
+    fields.page_formulaire = truncateValue(window.location.pathname);
+
+    document.querySelectorAll('form[data-preserve-query]').forEach(function(form) {
+        Object.keys(fields).forEach(function(key) {
+            // Ne remplace jamais un champ déjà présent dans le formulaire.
+            if (form.elements.namedItem(key)) {
                 return;
             }
 
             const input = document.createElement('input');
             input.type = 'hidden';
             input.name = key;
-            // Tronque la valeur pour limiter les abus.
-            input.value = value.slice(0, MAX_QUERY_VALUE_LENGTH);
+            input.value = fields[key];
             form.appendChild(input);
         });
     });
@@ -57,5 +124,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    preserveQueryParameters();
+    addAttributionFields();
 });
