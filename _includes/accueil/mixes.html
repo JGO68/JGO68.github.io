@@ -1,4 +1,4 @@
-{%- comment -%} Section Mixes des 3 accueils. Paramètre : langue (fr, en, es). {%- endcomment -%}
+{%- comment -%} Section Mixes des 3 accueils. Paramètre : langue (fr, en, es). Mixes : _data/entreprise.yml. {%- endcomment -%}
 {%- assign t = site.data.accueil[include.langue] -%}
 <section id="mixes" class="py-32 bg-gradient-to-b from-gray-900 to-black">
         <div class="container mx-auto px-4">
@@ -6,38 +6,18 @@
                 {{ t.mixes }}
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Mix 1: Shaker Mix -->
+                {%- for mix in site.data.entreprise.mixes %}
+                <!-- Mix {{ forloop.index }}: {{ mix.titre }} -->
                 <div class="bg-black/50 p-4 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
-                    data-aos-delay="100">
+                    data-aos-delay="{{ forloop.index | times: 100 }}">
                     <div class="w-full rounded-lg overflow-hidden">
-                        <iframe width="100%" height="120" title="DJ Steeve H. - Shaker Mix"
-                            src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2022-04-22-shaker-mix/&hide_cover=1&light=0"
+                        <iframe width="100%" height="120" title="DJ Steeve H. - {{ mix.titre }}"
+                            src="https://www.mixcloud.com/widget/iframe/?feed={{ mix.mixcloud }}&hide_cover=1&light=0"
                             frameborder="0" allow="autoplay" loading="lazy">
                         </iframe>
                     </div>
                 </div>
-
-                <!-- Mix 2: Mix de Reprise -->
-                <div class="bg-black/50 p-4 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <div class="w-full rounded-lg overflow-hidden">
-                        <iframe width="100%" height="120" title="DJ Steeve H. - Mix de Reprise"
-                            src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2024-10-20-mix-de-reprise/&hide_cover=1&light=0"
-                            frameborder="0" allow="autoplay" loading="lazy">
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Mix 3: Tommy Hilfiger Mix -->
-                <div class="bg-black/50 p-4 rounded-xl backdrop-blur-md hover-scale" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <div class="w-full rounded-lg overflow-hidden">
-                        <iframe width="100%" height="120" title="DJ Steeve H. - Tommy Hilfiger Mix"
-                            src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2022-04-22-mix-tommy-hilfiger/&hide_cover=1&light=0"
-                            frameborder="0" allow="autoplay" loading="lazy">
-                        </iframe>
-                    </div>
-                </div>
+                {%- endfor %}
             </div>
         </div>
     </section>

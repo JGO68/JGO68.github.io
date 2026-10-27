@@ -1,9 +1,20 @@
-# Textes de l'en-tête et du pied de page des 3 accueils (_includes/accueil/).
+# Textes des blocs communs des 3 accueils (_includes/accueil/).
 langues:
   - { code: fr, url: / }
   - { code: en, url: /index-en.html }
   - { code: es, url: /index-es.html }
 fr:
+  contact:
+    titre: Contactez-moi
+    joindre: "Pour me joindre, vous pouvez :"
+    appeler: M'appeler directement au
+    ou: ou
+    formulaire: Compléter le formulaire ci-dessous
+  avis:
+    ancre: avis
+    titre: Avis Clients
+    google: sur Google
+    voir_tous: Voir tous les avis sur Google
   mixes: Quelques-uns de mes mixes
   menu:
     - { ancre: accueil, libelle: Accueil, ordi: true }
@@ -15,7 +26,29 @@ fr:
   specialite: Spécialiste en musique Pop, Dance et Latino
   facebook: Suivez DJ Steeve H. sur Facebook
   droits: Tous droits réservés.
+  fiche:
+    description: "DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages, événements corporatifs et partys privés."
+    ville: "Québec"
+    catalogue: "Services DJ"
+    services:
+      - nom: "DJ Mariage"
+        description: "Animation musicale professionnelle pour votre mariage à Québec"
+      - nom: "DJ Événement Corporatif"
+        description: "Animation pour galas, 5 à 7 et événements d'entreprise"
+      - nom: "DJ Soirée Privée"
+        description: "Animation pour anniversaires, fêtes et réunions privées"
 en:
+  contact:
+    titre: Contact Me
+    joindre: "To reach me, you can:"
+    appeler: Call me directly at
+    ou: or
+    formulaire: Complete the form below
+  avis:
+    ancre: reviews
+    titre: Client Reviews
+    google: on Google
+    voir_tous: View all reviews on Google
   mixes: Some of my mixes
   menu:
     - { ancre: home, libelle: Home, ordi: true }
@@ -27,7 +60,29 @@ en:
   specialite: Specialist in Pop, Dance and Latin Music
   facebook: Follow DJ Steeve H. on Facebook
   droits: All rights reserved.
+  fiche:
+    description: "Professional DJ in Quebec City specializing in pop, dance and latin music. Entertainment for weddings, corporate events and private parties."
+    ville: "Quebec City"
+    catalogue: "DJ Services"
+    services:
+      - nom: "Wedding DJ"
+        description: "Professional music entertainment for your wedding in Quebec City"
+      - nom: "Corporate Event DJ"
+        description: "Entertainment for galas, happy hours and corporate events"
+      - nom: "Private Party DJ"
+        description: "Entertainment for birthdays, celebrations and private gatherings"
 es:
+  contact:
+    titre: Contáctame
+    joindre: "Para contactarme, puedes:"
+    appeler: Llamarme directamente al
+    ou: o
+    formulaire: Completar el formulario siguiente
+  avis:
+    ancre: opiniones
+    titre: Opiniones de Clientes
+    google: en Google
+    voir_tous: Ver todas las opiniones en Google
   mixes: Algunos de mis mixes
   menu:
     - { ancre: inicio, libelle: Inicio, ordi: true }
@@ -39,3 +94,14 @@ es:
   specialite: Especialista en música Pop, Dance y Latina
   facebook: Sigue a DJ Steeve H. en Facebook
   droits: Todos los derechos reservados.
+  fiche:
+    description: "DJ profesional en Quebec especializado en música pop, dance y latina. Animación de bodas, eventos corporativos y fiestas privadas."
+    ville: "Quebec"
+    catalogue: "Servicios DJ"
+    services:
+      - nom: "DJ para Bodas"
+        description: "Animación musical profesional para tu boda en Quebec"
+      - nom: "DJ para Eventos Corporativos"
+        description: "Animación para galas, after-office y eventos de empresa"
+      - nom: "DJ para Fiestas Privadas"
+        description: "Animación para cumpleaños, celebraciones y reuniones privadas"

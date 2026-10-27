@@ -1,0 +1,77 @@
+{%- comment -%}
+  Fiche Google (données structurées JSON-LD) des pages services. Front matter de la
+  page : fiche.nom, fiche.description, fiche.catalogue, fiche.service, fiche.type_service.
+  Paramètre facultatif : suite (éléments JSON ajoutés au graphe, ex. la FAQ de Noël).
+  Coordonnées : _data/entreprise.yml.
+{%- endcomment -%}
+{%- assign e = site.data.entreprise -%}
+{%- assign adresse = e.site | append: page.url -%}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "{{ adresse }}#page",
+          "url": "{{ adresse }}",
+          "name": {{ page.fiche.nom | jsonify }},
+          "description": {{ page.fiche.description | jsonify }},
+          "inLanguage": "fr-CA",
+          "isPartOf": {
+            "@id": "{{ e.site }}/#website"
+          },
+          "about": {
+            "@id": "{{ e.site }}/#business"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ e.site }}/#website",
+          "url": "{{ e.site }}/",
+          "name": {{ e.nom | jsonify }},
+          "inLanguage": "fr-CA"
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "{{ e.site }}/#business",
+          "name": {{ e.nom | jsonify }},
+          "image": "{{ e.image }}",
+          "description": "DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages, événements corporatifs et partys privés.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Québec",
+            "addressRegion": "QC",
+            "addressCountry": "CA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "{{ e.geo.latitude }}",
+            "longitude": "{{ e.geo.longitude }}"
+          },
+          "url": "{{ e.site }}/",
+          "telephone": "{{ e.telephone.international }}",
+          "areaServed": {{ e.villes | jsonify }},
+          "sameAs": [
+            "{{ e.facebook }}",
+            "{{ e.mixcloud }}"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": {{ page.fiche.catalogue | jsonify }},
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": {{ page.fiche.service | jsonify }},
+                  "serviceType": {{ page.fiche.type_service | jsonify }},
+                  "areaServed": {{ e.villes | jsonify }},
+                  "url": "{{ adresse }}"
+                }
+              }
+            ]
+          }
+        }{% if include.suite %},{{ include.suite }}{% endif %}
+      ]
+    }
+    </script>
