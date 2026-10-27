@@ -1,0 +1,60 @@
+{%- comment -%}
+  Fiche Google (données structurées JSON-LD) des 3 accueils. Paramètre : langue
+  (fr, en, es). Textes : _data/accueil.yml (fiche) ; coordonnées : _data/entreprise.yml.
+{%- endcomment -%}
+{%- assign e = site.data.entreprise -%}
+{%- assign t = site.data.accueil[include.langue].fiche -%}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": {{ e.nom | jsonify }},
+      "image": "{{ e.image }}",
+      "description": {{ t.description | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": {{ t.ville | jsonify }},
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "{{ e.geo.latitude }}",
+        "longitude": "{{ e.geo.longitude }}"
+      },
+      "url": "{{ e.site }}",
+      "telephone": "{{ e.telephone.international }}",
+      "priceRange": "$$",
+      {%- comment -%} La ville principale (première de la liste) est traduite. {%- endcomment %}
+      "areaServed": [{{ t.ville | jsonify }}{% for ville in e.villes offset: 1 %}, {{ ville | jsonify }}{% endfor %}],
+      "sameAs": [
+        "{{ e.facebook }}",
+        "{{ e.mixcloud }}"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": {{ t.catalogue | jsonify }},
+        "itemListElement": [
+          {%- for service in t.services %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": {{ service.nom | jsonify }},
+              "description": {{ service.description | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor %}
+        ]
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "{{ e.geo.latitude }}",
+          "longitude": "{{ e.geo.longitude }}"
+        },
+        "geoRadius": "50000"
+      }
+    }
+    </script>

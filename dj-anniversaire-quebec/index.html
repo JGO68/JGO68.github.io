@@ -4,6 +4,12 @@ menu_projet: Votre soirée
 zone:
   texte: >-
     Vous organisez une fête d'anniversaire à Québec ou vous cherchez un DJ anniversaire à Lévis? Le service s'adresse aux soirées privées de la grande région. Indiquez la ville et le lieu dans le formulaire pour donner le bon contexte à votre demande.
+fiche:
+  nom: "DJ Anniversaire à Québec | DJ Steeve H."
+  description: "Une animation musicale adaptée à la personne fêtée, à vos invités et à l'ambiance recherchée pour votre soirée anniversaire dans la grande région de Québec."
+  catalogue: "Service DJ pour anniversaire"
+  service: "DJ pour anniversaire à Québec"
+  type_service: "Animation musicale pour anniversaire"
 ---
 <!DOCTYPE html>
 <html lang="fr-CA">
@@ -39,91 +45,7 @@ zone:
     <link rel="stylesheet" href="/tailwind.css">
 
     {% include analytics.html %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": "https://djsteeveh.com/dj-anniversaire-quebec/#page",
-          "url": "https://djsteeveh.com/dj-anniversaire-quebec/",
-          "name": "DJ Anniversaire à Québec | DJ Steeve H.",
-          "description": "Une animation musicale adaptée à la personne fêtée, à vos invités et à l'ambiance recherchée pour votre soirée anniversaire dans la grande région de Québec.",
-          "inLanguage": "fr-CA",
-          "isPartOf": {
-            "@id": "https://djsteeveh.com/#website"
-          },
-          "about": {
-            "@id": "https://djsteeveh.com/#business"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://djsteeveh.com/#website",
-          "url": "https://djsteeveh.com/",
-          "name": "DJ Steeve H.",
-          "inLanguage": "fr-CA"
-        },
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://djsteeveh.com/#business",
-          "name": "DJ Steeve H.",
-          "image": "https://djsteeveh.com/photo.png",
-          "description": "DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages, événements corporatifs et partys privés.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Québec",
-            "addressRegion": "QC",
-            "addressCountry": "CA"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "46.8139",
-            "longitude": "-71.2080"
-          },
-          "url": "https://djsteeveh.com/",
-          "telephone": "+1-418-431-3229",
-          "areaServed": [
-            "Québec",
-            "Lévis",
-            "Beauport",
-            "Charlesbourg",
-            "Sainte-Foy",
-            "Cap-Rouge",
-            "L'Ancienne-Lorette"
-          ],
-          "sameAs": [
-            "https://www.facebook.com/DJsteeveH/",
-            "https://www.mixcloud.com/SteeveH/"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Service DJ pour anniversaire",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "DJ pour anniversaire à Québec",
-                  "serviceType": "Animation musicale pour anniversaire",
-                  "areaServed": [
-                    "Québec",
-                    "Lévis",
-                    "Beauport",
-                    "Charlesbourg",
-                    "Sainte-Foy",
-                    "Cap-Rouge",
-                    "L'Ancienne-Lorette"
-                  ],
-                  "url": "https://djsteeveh.com/dj-anniversaire-quebec/"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-    </script>
+    {% include service/fiche.html %}
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -154,16 +76,7 @@ zone:
                         au type de célébration, aux demandes spéciales et à l'atmosphère que vous imaginez.
                     </p>
 
-                    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                        <a href="#contact"
-                            class="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-4 text-center text-lg font-bold text-white shadow-lg shadow-orange-950/30 transition-all hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700">
-                            Demander une soumission
-                        </a>
-                        <a href="tel:+14184313229"
-                            class="inline-flex items-center justify-center rounded-lg border border-orange-400/60 px-6 py-4 text-center text-lg font-semibold text-orange-200 transition-colors hover:border-orange-300 hover:bg-orange-500/10">
-                            Appeler le (418) 431-3229
-                        </a>
-                    </div>
+                    {% include service/boutons.html %}
                 </div>
 
                 <figure class="relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-orange-300/30 bg-black/30 shadow-2xl shadow-black/40 hero-fade-left">
@@ -335,33 +248,7 @@ zone:
             </div>
         </section>
 
-        <section id="avis" class="bg-gradient-to-b from-black to-gray-900 px-4 py-20 sm:px-6 md:py-28">
-            <div class="container mx-auto max-w-6xl">
-                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Des expériences partagées</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Avis de clients</h2>
-                    <div class="mt-5 flex items-center justify-center gap-2 text-orange-400" aria-label="5.0 sur Google">
-                        <span class="text-2xl tracking-[0.15em]" aria-hidden="true">★★★★★</span>
-                        <span class="font-bold text-white">5.0</span>
-                        <span class="text-gray-400">sur Google</span>
-                    </div>
-                    <p class="mt-5 text-gray-400">
-                        Ces avis déjà publiés sur la page d'accueil parlent de l'expérience musicale et de l'accompagnement en général.
-                    </p>
-                </div>
-
-                <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {% include avis.html langue="fr" style="service" liste="gihane,cyndie,criseida,yann,sylvie" %}
-                </div>
-
-                <div class="mt-10 text-center" data-aos="fade-up">
-                    <a href="https://maps.app.goo.gl/RMgoz6ZuTaWYS54dA" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center rounded-lg border border-orange-500/30 bg-white/10 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/20">
-                        Voir tous les avis sur Google
-                    </a>
-                </div>
-            </div>
-        </section>
+        {% include service/avis.html style="service" liste="gihane,cyndie,criseida,yann,sylvie" intro="Ces avis déjà publiés sur la page d'accueil parlent de l'expérience musicale et de l'accompagnement en général." %}
 
         {% include service/mixes.html %}
 
@@ -369,15 +256,7 @@ zone:
 
         <section id="contact" class="bg-black px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto max-w-3xl">
-                <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Parlons de votre célébration</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Demander une soumission</h2>
-                    <p class="mt-6 text-lg leading-relaxed text-gray-300">
-                        Appelez-moi au <a href="tel:+14184313229"
-                            class="whitespace-nowrap font-semibold text-orange-400 transition-colors hover:text-orange-300">(418) 431-3229</a>
-                        ou complétez le formulaire pour votre anniversaire.
-                    </p>
-                </div>
+                {% include service/contact.html accroche="Parlons de votre célébration" pour="votre anniversaire." %}
 
                 <div class="mx-auto mt-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">
                     {% include formulaire.html langue="fr" style="service" message="Parlez-moi de votre anniversaire" bouton="Demander une soumission pour mon anniversaire" %}

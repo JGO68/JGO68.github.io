@@ -4,6 +4,12 @@ menu_projet: Votre mariage
 zone:
   texte: >-
     Vous planifiez votre réception à Québec ou vous cherchez un DJ à Lévis pour votre mariage? Le service de mariage s'adresse aux événements de la grande région. Indiquez la ville et le lieu de votre événement dans le formulaire pour donner le bon contexte à votre demande.
+fiche:
+  nom: "DJ Mariage à Québec | DJ Steeve H."
+  description: "Une animation musicale adaptée à votre mariage, à vos goûts et à vos invités dans la grande région de Québec."
+  catalogue: "Service DJ pour mariage"
+  service: "DJ de mariage à Québec"
+  type_service: "Animation musicale de mariage"
 ---
 <!DOCTYPE html>
 <html lang="fr-CA">
@@ -39,91 +45,7 @@ zone:
     <link rel="stylesheet" href="/tailwind.css">
 
     {% include analytics.html %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": "https://djsteeveh.com/dj-mariage-quebec/#page",
-          "url": "https://djsteeveh.com/dj-mariage-quebec/",
-          "name": "DJ Mariage à Québec | DJ Steeve H.",
-          "description": "Une animation musicale adaptée à votre mariage, à vos goûts et à vos invités dans la grande région de Québec.",
-          "inLanguage": "fr-CA",
-          "isPartOf": {
-            "@id": "https://djsteeveh.com/#website"
-          },
-          "about": {
-            "@id": "https://djsteeveh.com/#business"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://djsteeveh.com/#website",
-          "url": "https://djsteeveh.com/",
-          "name": "DJ Steeve H.",
-          "inLanguage": "fr-CA"
-        },
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://djsteeveh.com/#business",
-          "name": "DJ Steeve H.",
-          "image": "https://djsteeveh.com/photo.png",
-          "description": "DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages, événements corporatifs et partys privés.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Québec",
-            "addressRegion": "QC",
-            "addressCountry": "CA"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "46.8139",
-            "longitude": "-71.2080"
-          },
-          "url": "https://djsteeveh.com/",
-          "telephone": "+1-418-431-3229",
-          "areaServed": [
-            "Québec",
-            "Lévis",
-            "Beauport",
-            "Charlesbourg",
-            "Sainte-Foy",
-            "Cap-Rouge",
-            "L'Ancienne-Lorette"
-          ],
-          "sameAs": [
-            "https://www.facebook.com/DJsteeveH/",
-            "https://www.mixcloud.com/SteeveH/"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Service DJ pour mariage",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "DJ de mariage à Québec",
-                  "serviceType": "Animation musicale de mariage",
-                  "areaServed": [
-                    "Québec",
-                    "Lévis",
-                    "Beauport",
-                    "Charlesbourg",
-                    "Sainte-Foy",
-                    "Cap-Rouge",
-                    "L'Ancienne-Lorette"
-                  ],
-                  "url": "https://djsteeveh.com/dj-mariage-quebec/"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-    </script>
+    {% include service/fiche.html %}
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -153,16 +75,7 @@ zone:
                         étapes de la réception, du cocktail et de l'entrée au repas, puis au début de la soirée dansante.
                     </p>
 
-                    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                        <a href="#contact"
-                            class="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-4 text-center text-lg font-bold text-white shadow-lg shadow-orange-950/30 transition-all hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700">
-                            Demander une soumission
-                        </a>
-                        <a href="tel:+14184313229"
-                            class="inline-flex items-center justify-center rounded-lg border border-orange-400/60 px-6 py-4 text-center text-lg font-semibold text-orange-200 transition-colors hover:border-orange-300 hover:bg-orange-500/10">
-                            Appeler le (418) 431-3229
-                        </a>
-                    </div>
+                    {% include service/boutons.html %}
                 </div>
 
                 <figure class="relative mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-orange-300/30 bg-black/30 shadow-2xl shadow-black/40 hero-fade-left">
@@ -324,30 +237,7 @@ zone:
             </div>
         </section>
 
-        <section id="avis" class="bg-gradient-to-b from-black to-gray-900 px-4 py-20 sm:px-6 md:py-28">
-            <div class="container mx-auto max-w-6xl">
-                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Des expériences partagées</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Avis de clients</h2>
-                    <div class="mt-5 flex items-center justify-center gap-2 text-orange-400" aria-label="5.0 sur Google">
-                        <span class="text-2xl tracking-[0.15em]" aria-hidden="true">★★★★★</span>
-                        <span class="font-bold text-white">5.0</span>
-                        <span class="text-gray-400">sur Google</span>
-                    </div>
-                </div>
-
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {% include avis.html langue="fr" style="mariage" liste="gihane,cyndie,criseida,yann,sylvie" decalage=1 %}
-                </div>
-
-                <div class="mt-10 text-center" data-aos="fade-up">
-                    <a href="https://maps.app.goo.gl/RMgoz6ZuTaWYS54dA" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center rounded-lg border border-orange-500/30 bg-white/10 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/20">
-                        Voir tous les avis sur Google
-                    </a>
-                </div>
-            </div>
-        </section>
+        {% include service/avis.html style="mariage" liste="gihane,cyndie,criseida,yann,sylvie" decalage=1 %}
 
         {% include service/mixes.html %}
 
@@ -355,17 +245,7 @@ zone:
 
         <section id="contact" class="py-32 bg-black">
             <div class="container mx-auto px-4">
-                <h2 class="gradient-text text-5xl font-bold text-center mb-16" data-aos="fade-up">Contactez-moi</h2>
-                <div class="text-center mb-8 text-white" data-aos="fade-up" data-aos-delay="50">
-                    <p class="text-xl mb-4">Pour me joindre, vous pouvez :</p>
-                    <p class="text-xl mb-6">
-                        M'appeler directement au <a href="tel:+14184313229"
-                            class="text-orange-500 underline underline-offset-2 hover:text-orange-400 transition-colors duration-300 whitespace-nowrap">(418)
-                            431-3229</a>
-                        <br>ou<br>
-                        Compléter le formulaire ci-dessous
-                    </p>
-                </div>
+                {% include accueil/contact.html langue="fr" %}
                 <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                     {% include formulaire.html langue="fr" style="service" date_libelle="Date du mariage" lieu="Lieu ou ville de la réception" message="Parlez-moi de votre mariage" bouton="Demander une soumission pour mon mariage" %}
                 </div>

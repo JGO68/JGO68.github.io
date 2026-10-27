@@ -37,73 +37,7 @@ layout: null
     <link rel="alternate" hreflang="en-CA" href="https://djsteeveh.com/index-en.html">
     <link rel="alternate" hreflang="es" href="https://djsteeveh.com/index-es.html">
     <link rel="alternate" hreflang="x-default" href="https://djsteeveh.com/">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "DJ Steeve H.",
-      "image": "https://djsteeveh.com/photo.png",
-      "description": "Professional DJ in Quebec City specializing in pop, dance and latin music. Entertainment for weddings, corporate events and private parties.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Quebec City",
-        "addressRegion": "QC",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "46.8139",
-        "longitude": "-71.2080"
-      },
-      "url": "https://djsteeveh.com",
-      "telephone": "+1-418-431-3229",
-      "priceRange": "$$",
-      "areaServed": ["Quebec City", "Lévis", "Beauport", "Charlesbourg", "Sainte-Foy", "Cap-Rouge", "L'Ancienne-Lorette"],
-      "sameAs": [
-        "https://www.facebook.com/DJsteeveH/",
-        "https://www.mixcloud.com/SteeveH/"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "DJ Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Wedding DJ",
-              "description": "Professional music entertainment for your wedding in Quebec City"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Corporate Event DJ",
-              "description": "Entertainment for galas, happy hours and corporate events"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Private Party DJ",
-              "description": "Entertainment for birthdays, celebrations and private gatherings"
-            }
-          }
-        ]
-      },
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "46.8139",
-          "longitude": "-71.2080"
-        },
-        "geoRadius": "50000"
-      }
-    }
-    </script>
+    {% include accueil/fiche.html langue="en" %}
     <link rel="stylesheet" href="/tailwind.css">
     {% include analytics.html %}
 </head>
@@ -224,57 +158,7 @@ layout: null
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="py-32 bg-gradient-to-b from-black to-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="gradient-text text-5xl font-bold text-center mb-4" data-aos="fade-up">Client Reviews</h2>
-            <div class="flex items-center justify-center mb-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex items-center gap-2">
-                    <div class="flex text-orange-500">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                            </path>
-                        </svg>
-                    </div>
-                    <span class="text-white text-xl font-bold ml-2">5.0</span>
-                    <span class="text-gray-400 text-lg">on Google</span>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {% include avis.html langue="en" style="accueil" liste="alexandra,gihane,cyndie,criseida,yann,sylvie" %}
-            </div>
-            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="700">
-                <a href="https://maps.app.goo.gl/RMgoz6ZuTaWYS54dA" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-orange-500/30">
-                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                    </svg>
-                    View all reviews on Google
-                </a>
-            </div>
-        </div>
-    </section>
+    {% include accueil/avis.html langue="en" %}
 
     <!-- Mixes Section -->
     {% include accueil/mixes.html langue="en" %}
@@ -282,17 +166,7 @@ layout: null
     <!-- Contact Section -->
     <section id="contact" class="py-32 bg-black">
         <div class="container mx-auto px-4">
-            <h2 class="gradient-text text-5xl font-bold text-center mb-16" data-aos="fade-up">Contact Me</h2>
-            <div class="text-center mb-8 text-white" data-aos="fade-up" data-aos-delay="50">
-                <p class="text-xl mb-4">To reach me, you can:</p>
-                <p class="text-xl mb-6">
-                    Call me directly at <a href="tel:+14184313229"
-                        class="text-orange-500 underline underline-offset-2 hover:text-orange-400 transition-colors duration-300 whitespace-nowrap">(418)
-                        431-3229</a>
-                    <br>or<br>
-                    Complete the form below
-                </p>
-            </div>
+            {% include accueil/contact.html langue="en" %}
             <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                 {% include formulaire.html langue="en" style="accueil" %}
             </div>

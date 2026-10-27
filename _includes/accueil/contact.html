@@ -1,0 +1,16 @@
+{%- comment -%}
+  Haut de la section Contact des 3 accueils et de la page Mariage. Paramètre :
+  langue (fr, en, es). Textes : _data/accueil.yml (contact).
+{%- endcomment -%}
+{%- assign t = site.data.accueil[include.langue].contact -%}
+{%- assign tel = site.data.entreprise.telephone -%}
+<h2 class="gradient-text text-5xl font-bold text-center mb-16" data-aos="fade-up">{{ t.titre }}</h2>
+                <div class="text-center mb-8 text-white" data-aos="fade-up" data-aos-delay="50">
+                    <p class="text-xl mb-4">{{ t.joindre }}</p>
+                    <p class="text-xl mb-6">
+                        {{ t.appeler }} <a href="{{ tel.lien }}"
+                            class="text-orange-500 underline underline-offset-2 hover:text-orange-400 transition-colors duration-300 whitespace-nowrap">{{ tel.affiche }}</a>
+                        <br>{{ t.ou }}<br>
+                        {{ t.formulaire }}
+                    </p>
+                </div>

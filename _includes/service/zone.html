@@ -18,13 +18,9 @@
                 <div class="{% if page.zone.anti_debordement %}min-w-0 {% endif %}rounded-2xl border border-orange-300/20 bg-black/40 p-7" data-aos="fade-left">
                     <h3 class="text-xl font-semibold text-white">Secteurs desservis</h3>
                     <ul class="mt-5 grid grid-cols-2 gap-3 text-gray-300 sm:grid-cols-3 lg:grid-cols-2">
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Québec</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Lévis</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Beauport</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Charlesbourg</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Sainte-Foy</li>
-                        <li class="rounded-lg bg-white/5 px-3 py-2">Cap-Rouge</li>
-                        <li class="col-span-2 rounded-lg bg-white/5 px-3 py-2 sm:col-span-1 lg:col-span-2">L'Ancienne-Lorette</li>
+                        {%- for ville in site.data.entreprise.villes %}
+                        <li class="{% if forloop.last %}col-span-2 sm:col-span-1 lg:col-span-2 {% endif %}rounded-lg bg-white/5 px-3 py-2">{{ ville }}</li>
+                        {%- endfor %}
                     </ul>
                 </div>
             </div>

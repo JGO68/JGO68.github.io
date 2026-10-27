@@ -1,0 +1,33 @@
+{%- comment -%}
+  Section « Avis de clients » des pages services. Paramètres : style (service ou
+  mariage), liste (avis affichés, voir _includes/avis.html) ; facultatifs : intro
+  (phrase sous le titre), decalage.
+{%- endcomment -%}
+<section id="avis" class="bg-gradient-to-b from-black to-gray-900 px-4 py-20 sm:px-6 md:py-28">
+            <div class="container mx-auto max-w-6xl">
+                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Des expériences partagées</p>
+                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Avis de clients</h2>
+                    <div class="mt-5 flex items-center justify-center gap-2 text-orange-400" aria-label="5.0 sur Google">
+                        <span class="text-2xl tracking-[0.15em]" aria-hidden="true">★★★★★</span>
+                        <span class="font-bold text-white">5.0</span>
+                        <span class="text-gray-400">sur Google</span>
+                    </div>{%- if include.intro %}
+                    <p class="mt-5 text-gray-400">
+                        {{ include.intro }}
+                    </p>
+                    {%- endif %}
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {% include avis.html langue="fr" style=include.style liste=include.liste decalage=include.decalage %}
+                </div>
+
+                <div class="mt-10 text-center" data-aos="fade-up">
+                    <a href="{{ site.data.entreprise.avis_google }}" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center rounded-lg border border-orange-500/30 bg-white/10 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/20">
+                        Voir tous les avis sur Google
+                    </a>
+                </div>
+            </div>
+        </section>

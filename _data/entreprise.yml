@@ -1,0 +1,21 @@
+# Coordonnées et liens de l'entreprise, utilisés par toutes les pages.
+# Modifier ici : le changement s'applique partout (textes, liens et fiche Google).
+nom: DJ Steeve H.
+site: https://djsteeveh.com
+image: https://djsteeveh.com/photo.png
+telephone:
+  affiche: (418) 431-3229
+  lien: tel:+14184313229
+  international: +1-418-431-3229
+# Centre de la zone desservie (fiche Google).
+geo: { latitude: "46.8139", longitude: "-71.2080" }
+# Villes desservies, dans l'ordre d'affichage (la première est la ville principale).
+villes: [Québec, Lévis, Beauport, Charlesbourg, Sainte-Foy, Cap-Rouge, L'Ancienne-Lorette]
+facebook: https://www.facebook.com/DJsteeveH/
+mixcloud: https://www.mixcloud.com/SteeveH/
+avis_google: https://maps.app.goo.gl/RMgoz6ZuTaWYS54dA
+# Mixes affichés dans la section Mixes (adresse Mixcloud sans le domaine).
+mixes:
+  - { titre: Shaker Mix, mixcloud: /SteeveH/2022-04-22-shaker-mix/ }
+  - { titre: Mix de Reprise, mixcloud: /SteeveH/2024-10-20-mix-de-reprise/ }
+  - { titre: Tommy Hilfiger Mix, mixcloud: /SteeveH/2022-04-22-mix-tommy-hilfiger/ }
