@@ -1,3 +1,8 @@
+---
+layout: null
+menu_projet: Votre événement
+faq: true
+---
 <!DOCTYPE html>
 <html lang="fr-CA">
 
@@ -31,7 +36,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/tailwind.css">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-191XV8D4B1"></script>
+    {% include analytics.html %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -158,41 +163,7 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <nav class="container mx-auto flex items-center justify-between gap-4 px-4 py-4 lg:px-8"
-            aria-label="Navigation principale">
-            <a href="/" class="shrink-0 text-lg font-bold tracking-tight text-orange-500 sm:text-xl"
-                aria-label="Retour à l'accueil de DJ Steeve H.">
-                DJ Steeve H.
-            </a>
-
-            <div class="hidden items-center gap-6 text-sm text-gray-200 md:flex">
-                <a href="/" class="transition-colors hover:text-orange-400">Accueil</a>
-                <a href="#sur-mesure" class="transition-colors hover:text-orange-400">Votre événement</a>
-                <a href="#avis" class="transition-colors hover:text-orange-400">Avis</a>
-                <a href="#mixes" class="transition-colors hover:text-orange-400">Mixes</a>
-                <a href="#faq" class="transition-colors hover:text-orange-400">FAQ</a>
-                <a href="#contact" class="transition-colors hover:text-orange-400">Soumission</a>
-            </div>
-
-            <div class="flex items-center gap-2 sm:gap-3">
-                <div class="flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wide"
-                    aria-label="Choix de langue">
-                    <a href="/dj-party-noel-quebec/" class="text-orange-400" aria-current="page">FR</a>
-                    <a href="/index-en.html" class="text-gray-300 transition-colors hover:text-orange-400">EN</a>
-                    <a href="/index-es.html" class="text-gray-300 transition-colors hover:text-orange-400">ES</a>
-                </div>
-                <a href="tel:+14184313229"
-                    class="hidden whitespace-nowrap rounded-lg border border-orange-500/40 px-3 py-2 text-sm text-orange-300 transition-colors hover:border-orange-400 hover:text-orange-200 sm:inline-flex">
-                    (418) 431-3229
-                </a>
-                <a href="#contact"
-                    class="whitespace-nowrap rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-3 py-2 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:from-orange-600 hover:to-orange-700 sm:px-4">
-                    Soumission
-                </a>
-            </div>
-        </nav>
-    </header>
+    {% include service/entete.html %}
 
     <main>
         <section id="accueil"
@@ -516,51 +487,7 @@
             </div>
         </section>
 
-        <section id="mixes" class="bg-gradient-to-b from-gray-900 to-black px-4 py-20 sm:px-6 md:py-28">
-            <div class="container mx-auto max-w-6xl">
-                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">À écouter</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-                        Quelques-uns de mes mixes
-                    </h2>
-                    <p class="mt-6 text-lg leading-relaxed text-gray-300">
-                        Découvrez quelques mixes de DJ Steeve H. pour vous faire une idée de son univers musical.
-                    </p>
-                </div>
-
-                <div class="mt-12 grid gap-8 md:grid-cols-3">
-                    <article class="rounded-xl bg-black/50 p-4 backdrop-blur-md transition-transform hover:-translate-y-1"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-full overflow-hidden rounded-lg">
-                            <iframe width="100%" height="120" title="DJ Steeve H. - Shaker Mix"
-                                src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2022-04-22-shaker-mix/&hide_cover=1&light=0"
-                                frameborder="0" allow="autoplay" loading="lazy">
-                            </iframe>
-                        </div>
-                    </article>
-
-                    <article class="rounded-xl bg-black/50 p-4 backdrop-blur-md transition-transform hover:-translate-y-1"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-full overflow-hidden rounded-lg">
-                            <iframe width="100%" height="120" title="DJ Steeve H. - Mix de Reprise"
-                                src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2024-10-20-mix-de-reprise/&hide_cover=1&light=0"
-                                frameborder="0" allow="autoplay" loading="lazy">
-                            </iframe>
-                        </div>
-                    </article>
-
-                    <article class="rounded-xl bg-black/50 p-4 backdrop-blur-md transition-transform hover:-translate-y-1"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-full overflow-hidden rounded-lg">
-                            <iframe width="100%" height="120" title="DJ Steeve H. - Tommy Hilfiger Mix"
-                                src="https://www.mixcloud.com/widget/iframe/?feed=/SteeveH/2022-04-22-mix-tommy-hilfiger/&hide_cover=1&light=0"
-                                frameborder="0" allow="autoplay" loading="lazy">
-                            </iframe>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+        {% include service/mixes.html %}
 
         <section id="zone" class="bg-orange-950/50 px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
@@ -722,19 +649,7 @@
         </section>
     </main>
 
-    <footer class="bg-black px-4 py-8 text-center text-gray-400">
-        <p class="text-lg text-gray-300">DJ Steeve H. - DJ Professionnel à Québec</p>
-        <p class="mt-2 text-sm">Spécialiste en musique Pop, Dance et Latino</p>
-        <a href="/" class="mt-5 inline-block text-orange-400 transition-colors hover:text-orange-300">
-            Retour à la page d'accueil
-        </a>
-        <nav aria-label="Autres services" class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-orange-400">
-            <a href="/dj-mariage-quebec/" class="transition-colors hover:text-orange-300">DJ de mariage à Québec</a>
-            <a href="/dj-anniversaire-quebec/" class="transition-colors hover:text-orange-300">DJ d'anniversaire à Québec</a>
-            <a href="/dj-corporatif-quebec/" class="transition-colors hover:text-orange-300">DJ corporatif à Québec</a>
-        </nav>
-        <p class="mt-5 text-sm">© 2025 DJ Steeve H. Tous droits réservés.</p>
-    </footer>
+    {% include service/pied.html %}
 
     <script src="/vendor/aos.js"></script>
     <script src="/main.js"></script>

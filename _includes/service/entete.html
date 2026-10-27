@@ -1,0 +1,37 @@
+<header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
+        <nav class="container mx-auto flex items-center justify-between gap-4 px-4 py-4 lg:px-8"
+            aria-label="Navigation principale">
+            <a href="/" class="shrink-0 text-lg font-bold tracking-tight text-orange-500 sm:text-xl"
+                aria-label="Retour à l'accueil de DJ Steeve H.">
+                DJ Steeve H.
+            </a>
+
+            <div class="hidden items-center gap-6 text-sm text-gray-200 md:flex">
+                <a href="/" class="transition-colors hover:text-orange-400">Accueil</a>
+                <a href="#sur-mesure" class="transition-colors hover:text-orange-400">{{ page.menu_projet }}</a>
+                <a href="#avis" class="transition-colors hover:text-orange-400">Avis</a>
+                <a href="#mixes" class="transition-colors hover:text-orange-400">Mixes</a>
+{%- if page.faq %}
+                <a href="#faq" class="transition-colors hover:text-orange-400">FAQ</a>
+{%- endif %}
+                <a href="#contact" class="transition-colors hover:text-orange-400">Soumission</a>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <div class="flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wide"
+                    aria-label="Choix de langue">
+                    <a href="{{ page.url }}" class="text-orange-400" aria-current="page">FR</a>
+                    <a href="/index-en.html" class="text-gray-300 transition-colors hover:text-orange-400">EN</a>
+                    <a href="/index-es.html" class="text-gray-300 transition-colors hover:text-orange-400">ES</a>
+                </div>
+                <a href="tel:+14184313229"
+                    class="hidden whitespace-nowrap rounded-lg border border-orange-500/40 px-3 py-2 text-sm text-orange-300 transition-colors hover:border-orange-400 hover:text-orange-200 sm:inline-flex">
+                    (418) 431-3229
+                </a>
+                <a href="#contact"
+                    class="whitespace-nowrap rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-3 py-2 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:from-orange-600 hover:to-orange-700 sm:px-4">
+                    Soumission
+                </a>
+            </div>
+        </nav>
+    </header>
