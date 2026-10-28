@@ -1,6 +1,25 @@
 ---
 layout: null
 menu_projet: Votre mariage
+faq:
+  titre: "Questions fréquentes sur le DJ de mariage"
+  questions:
+    - question: "Combien coûte un DJ de mariage à Québec ?"
+      reponse: "Le prix est variable et dépend de ce dont votre mariage a besoin, par exemple selon que votre salle fournit déjà la sonorisation, le micro et l'éclairage, ou que j'apporte l'équipement complet. Décrivez-moi votre mariage dans le formulaire de soumission et je vous envoie un prix adapté."
+    - question: "Combien de temps à l'avance faut-il réserver un DJ pour un mariage ?"
+      reponse: "Le plus tôt possible. Contactez-moi dès que la date et la salle de votre mariage sont confirmées pour vérifier ma disponibilité."
+    - question: "Pouvez-vous faire la musique de la cérémonie ?"
+      reponse: "Oui : l'entrée des mariés, la signature du registre et la sortie. On choisit ensemble les chansons de chacun de ces moments."
+    - question: "Fournissez-vous un micro pour les discours et les vœux ?"
+      reponse: "Oui, un micro sans fil est prévu pour les vœux, les discours et les remerciements."
+    - question: "Pouvez-vous jouer notre première danse et les danses spéciales ?"
+      reponse: "Oui. Transmettez-moi vos chansons pour la première danse et les autres danses spéciales, par exemple avec vos parents, et je les intègre au bon moment de la soirée."
+    - question: "Comment planifie-t-on la musique du mariage ?"
+      reponse: "Avant le mariage, on se parle au téléphone ou on se rencontre pour passer en revue le déroulement de la journée, vos incontournables et vos demandes spéciales."
+    - question: "Quel équipement est fourni pour le mariage ?"
+      reponse: "Avec le forfait complet, j'apporte un équipement de sonorisation complet, un micro et l'éclairage. Si votre salle est déjà équipée, le forfait DJ et animation suffit : je vérifie avec vous à l'avance le matériel sur place pour m'assurer qu'il est compatible."
+    - question: "Vous déplacez-vous à Lévis et dans les environs de Québec ?"
+      reponse: "Oui, le déplacement est inclus dans toute la grande région de Québec : [villes]. Indiquez le lieu de votre réception dans le formulaire de soumission."
 zone:
   texte: >-
     Vous planifiez votre réception à Québec ou vous cherchez un DJ à Lévis pour votre mariage? Le service de mariage s'adresse aux événements de la grande région. Indiquez la ville et le lieu de votre événement dans le formulaire pour donner le bon contexte à votre demande.
@@ -237,16 +256,33 @@ fiche:
             </div>
         </section>
 
-        {% include service/avis.html style="mariage" liste="gihane,cyndie,criseida,yann,sylvie" decalage=1 %}
+        <section id="anniversaire" class="bg-orange-950/50 px-4 py-16 sm:px-6 md:py-20">
+            <div class="container mx-auto max-w-4xl rounded-2xl border border-orange-300/20 bg-black/30 p-7 sm:p-10">
+                <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-300">Autres fêtes</p>
+                <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl">Vous planifiez une autre fête?</h2>
+                <p class="mt-4 max-w-2xl leading-relaxed text-gray-300">
+                    Découvrez le service DJ pour anniversaires et soirées privées à Québec.
+                </p>
+                <a href="/dj-anniversaire-quebec/"
+                    class="mt-6 inline-flex items-center justify-center rounded-lg border border-orange-400/60 px-5 py-3 font-semibold text-orange-200 transition-colors hover:border-orange-300 hover:bg-orange-500/10">
+                    DJ anniversaire à Québec
+                </a>
+            </div>
+        </section>
+
+        {% include service/avis.html liste="gihane,cyndie,criseida,yann,sylvie" intro="Découvrez ce que des clients disent de la musique, de l'écoute et de l'ambiance." %}
 
         {% include service/mixes.html %}
 
         {% include service/zone.html %}
 
-        <section id="contact" class="py-32 bg-black">
-            <div class="container mx-auto px-4">
-                {% include accueil/contact.html langue="fr" %}
-                <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        {% include service/faq.html %}
+
+        <section id="contact" class="bg-black px-4 py-20 sm:px-6 md:py-28">
+            <div class="container mx-auto max-w-3xl">
+                {% include service/contact.html accroche="Parlons de votre mariage" pour="votre mariage." %}
+
+                <div class="mx-auto mt-12 max-w-xl" data-aos="fade-up" data-aos-delay="100">
                     {% include formulaire.html langue="fr" style="service" date_libelle="Date du mariage" lieu="Lieu ou ville de la réception" message="Parlez-moi de votre mariage" bouton="Demander une soumission pour mon mariage" %}
                 </div>
             </div>

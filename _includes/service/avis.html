@@ -1,7 +1,6 @@
 {%- comment -%}
-  Section « Avis de clients » des pages services. Paramètres : style (service ou
-  mariage), liste (avis affichés, voir _includes/avis.html) ; facultatifs : intro
-  (phrase sous le titre), decalage.
+  Section « Avis de clients » des pages services. Paramètres : liste (avis affichés,
+  voir _includes/avis.html) ; facultatif : intro (phrase sous le titre).
 {%- endcomment -%}
 <section id="avis" class="bg-gradient-to-b from-black to-gray-900 px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto max-w-6xl">
@@ -20,7 +19,7 @@
                 </div>
 
                 <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {% include avis.html langue="fr" style=include.style liste=include.liste decalage=include.decalage %}
+                    {% include avis.html langue="fr" style="service" liste=include.liste %}
                 </div>
 
                 <div class="mt-10 text-center" data-aos="fade-up">

@@ -19,10 +19,14 @@ Pour les modifier, modifier le bloc, pas les pages :
 - `_includes/formulaire.html` : formulaire de soumission des 7 pages ; textes FR / EN / ES
   dans `_data/formulaire.yml`, particularités de chaque page dans les paramètres de l'include.
 - `_includes/accueil/` : blocs des 3 accueils : `entete.html`, `pied.html`, `mixes.html`,
-  `avis.html`, `contact.html` (aussi utilisé par la page Mariage) et `fiche.html`
+  `avis.html`, `contact.html` et `fiche.html`
   (fiche Google JSON-LD) ; textes FR / EN / ES dans `_data/accueil.yml`.
 - `_includes/avis.html` : cartes d'avis clients des 7 pages ; textes FR / EN / ES dans `_data/avis.yml`,
   avis affichés (et leur ordre) choisis par chaque page dans le paramètre `liste`.
+- FAQ des pages services : questions et réponses dans le front matter de la page
+  (`faq.titre`, `faq.questions`), affichées par `_includes/service/faq.html` et ajoutées
+  à la fiche Google par `fiche.html`. Écrire `[villes]` dans une réponse pour la liste
+  des villes desservies.
 - Section « zone desservie » des pages services : paragraphe propre à chaque page
   dans son front matter (`zone.texte`).
 
