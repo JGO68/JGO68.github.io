@@ -1,7 +1,8 @@
 {%- comment -%}
   Fiche Google (données structurées JSON-LD) des pages services. Front matter de la
   page : fiche.nom, fiche.description, fiche.catalogue, fiche.service, fiche.type_service.
-  Paramètre facultatif : suite (éléments JSON ajoutés au graphe, ex. la FAQ de Noël).
+  Si la page a une FAQ (faq.questions, voir _includes/service/faq.html), elle est
+  ajoutée au graphe.
   Coordonnées : _data/entreprise.yml.
 {%- endcomment -%}
 {%- assign e = site.data.entreprise -%}
@@ -71,7 +72,23 @@
               }
             ]
           }
-        }{% if include.suite %},{{ include.suite }}{% endif %}
+        }{% if page.faq %},
+        {
+          "@type": "FAQPage",
+          "@id": "{{ adresse }}#faq",
+          "inLanguage": "fr-CA",
+          "isPartOf": { "@id": "{{ adresse }}#page" },
+          "mainEntity": [
+            {%- for q in page.faq.questions %}
+            {%- capture reponse %}{% include service/faq-reponse.html texte=q.reponse %}{% endcapture %}
+            {
+              "@type": "Question",
+              "name": {{ q.question | jsonify }},
+              "acceptedAnswer": { "@type": "Answer", "text": {{ reponse | jsonify }} }
+            }{% unless forloop.last %},{% endunless %}
+            {%- endfor %}
+          ]
+        }{% endif %}
       ]
     }
     </script>

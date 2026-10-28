@@ -1,0 +1,7 @@
+{%- comment -%}
+  Texte d'une réponse de la FAQ, avec [villes] remplacé par « Québec, Lévis, …
+  et L'Ancienne-Lorette » (_data/entreprise.yml). Paramètre : texte.
+{%- endcomment -%}
+{%- assign villes = site.data.entreprise.villes -%}
+{%- capture liste -%}{% for v in villes %}{% if forloop.last %} et {% elsif forloop.first == false %}, {% endif %}{{ v }}{% endfor %}{%- endcapture -%}
+{{- include.texte | replace: "[villes]", liste -}}
