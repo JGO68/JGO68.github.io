@@ -1,4 +1,4 @@
-// Description des 7 pages du site : la source de vérité des tests e2e.
+// Description des 8 pages du site : la source de vérité des tests e2e.
 // Ajouter une page ici suffit pour qu'elle soit couverte par toute la suite.
 
 const DOMAINE = 'https://djsteeveh.com';
@@ -40,6 +40,16 @@ const SERVICE_COMMUN = {
     hreflang: null
 };
 
+// Paire Mariage FR / Wedding EN : liens hreflang et choix de langue du menu.
+const MARIAGE_LANGUES = {
+    hreflang: {
+        'fr-CA': '/dj-mariage-quebec/',
+        'en-CA': '/wedding-dj-quebec-city/',
+        'x-default': '/dj-mariage-quebec/'
+    },
+    langues: { FR: '/dj-mariage-quebec/', EN: '/wedding-dj-quebec-city/', ES: '/index-es.html' }
+};
+
 const PAGES = [
     {
         ...ACCUEIL_COMMUN,
@@ -73,6 +83,7 @@ const PAGES = [
     },
     {
         ...SERVICE_COMMUN,
+        ...MARIAGE_LANGUES,
         nom: 'mariage',
         chemin: '/dj-mariage-quebec/',
         ogImage: '/mariage.jpg',
@@ -80,6 +91,19 @@ const PAGES = [
         sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'anniversaire', 'avis', 'mixes', 'zone', 'faq', 'contact'],
         requis: ['nom', 'email', 'date_evenement', 'lieu', 'message'],
         bouton: 'Demander une soumission pour mon mariage'
+    },
+    {
+        ...SERVICE_COMMUN,
+        ...MARIAGE_LANGUES,
+        nom: 'mariage-en',
+        chemin: '/wedding-dj-quebec-city/',
+        langue: 'en',
+        lang: 'en-CA',
+        ogImage: '/mariage.jpg',
+        jsonLd: ['WebPage', 'WebSite', 'LocalBusiness', 'FAQPage'],
+        sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'services', 'avis', 'mixes', 'zone', 'faq', 'contact'],
+        requis: ['name', 'email', 'date_evenement', 'lieu', 'message'],
+        bouton: 'Request a quote for my wedding'
     },
     {
         ...SERVICE_COMMUN,

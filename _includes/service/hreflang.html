@@ -1,0 +1,11 @@
+{%- comment -%}
+  Liens hreflang d'une page services traduite. Front matter : langues.fr et
+  langues.en (adresses des deux versions) ; la version française sert aussi de
+  x-default. N'affiche rien si la page n'a pas de traduction.
+{%- endcomment -%}
+{%- if page.langues -%}
+{%- assign site_url = site.data.entreprise.site -%}
+<link rel="alternate" hreflang="fr-CA" href="{{ site_url }}{{ page.langues.fr }}">
+    <link rel="alternate" hreflang="en-CA" href="{{ site_url }}{{ page.langues.en }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site_url }}{{ page.langues.fr }}">
+{%- endif -%}

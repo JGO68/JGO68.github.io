@@ -14,7 +14,7 @@
                             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-xl font-bold text-white">{{ avis.nom | slice: 0 }}</div>
                             <div class="ml-4">
                                 <h3 class="font-semibold text-white">{{ avis.nom }}</h3>
-                                <div class="text-orange-500" aria-label="5 étoiles">★★★★★</div>
+                                <div class="text-orange-500" aria-label="{{ site.data.service[include.langue].avis.etoiles }}">★★★★★</div>
                             </div>
                         </div>
                         <p class="text-gray-300 italic">"{{ avis.texte[include.langue] }}"</p>

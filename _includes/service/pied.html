@@ -1,15 +1,26 @@
+{%- comment -%}
+  Pied de page des pages services. Liens « Autres services » : _data/services.yml
+  (sans la page elle-même ni sa traduction). Sur une page anglaise, les pages
+  françaises sont signalées « (in French) ».
+{%- endcomment -%}
+{%- assign langue = page.langue | default: "fr" -%}
+{%- assign t = site.data.service[langue] -%}
 <footer class="bg-black px-4 py-8 text-center text-gray-400">
-        <p class="text-lg text-gray-300">DJ Steeve H. - DJ Professionnel à Québec</p>
-        <p class="mt-2 text-sm">Spécialiste en musique Pop, Dance et Latino</p>
-        <a href="/" class="mt-5 inline-block text-orange-400 transition-colors hover:text-orange-300">
-            Retour à la page d'accueil
+        <p class="text-lg text-gray-300">{{ t.pied.titre }}</p>
+        <p class="mt-2 text-sm">{{ t.pied.specialite }}</p>
+        <a href="{{ t.pied.accueil }}" class="mt-5 inline-block text-orange-400 transition-colors hover:text-orange-300">
+            {{ t.pied.retour }}
         </a>
-        <nav aria-label="Autres services" class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-orange-400">
+        <nav aria-label="{{ t.pied.autres }}" class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-orange-400">
         {%- for service in site.data.services -%}
-        {%- unless service.url == page.url %}
+        {%- unless service.url == page.url or service.url == page.langues.fr %}
+            {%- if langue == "fr" %}
             <a href="{{ service.url }}" class="transition-colors hover:text-orange-300">{{ service.libelle }}</a>
+            {%- else %}
+            <a href="{{ service.url }}" hreflang="fr" class="transition-colors hover:text-orange-300">{{ service.libelle_en }} (in French)</a>
+            {%- endif %}
         {%- endunless -%}
         {%- endfor %}
         </nav>
-        <p class="mt-5 text-sm">© {{ site.time | date: '%Y' }} DJ Steeve H. Tous droits réservés.</p>
+        <p class="mt-5 text-sm">© {{ site.time | date: '%Y' }} DJ Steeve H. {{ t.pied.droits }}</p>
     </footer>

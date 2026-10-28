@@ -1,4 +1,4 @@
-// Les 5 vérifications essentielles, sur chacune des 7 pages du site.
+// Les 5 vérifications essentielles, sur chacune des 8 pages du site.
 // L'envoi vers Formspree et Google Analytics est intercepté : aucune vraie
 // demande n'est envoyée et les statistiques ne sont pas faussées.
 const { test, expect, FORMULAIRE, remplirFormulaire, envoyerFormulaire, defilerJusquEnBas } = require('./outils');
@@ -110,7 +110,7 @@ for (const infos of PAGES) {
             const langues = await page.locator('header a', { hasText: /^(FR|EN|ES)$/ }).evaluateAll(function(e) {
                 return Object.fromEntries(e.map(function(a) { return [a.textContent.trim(), a.getAttribute('href')]; }));
             });
-            expect(langues).toEqual({
+            expect(langues).toEqual(infos.langues || {
                 FR: infos.famille === 'service' ? infos.chemin : '/',
                 EN: '/index-en.html',
                 ES: '/index-es.html'
@@ -171,7 +171,7 @@ for (const infos of PAGES) {
     });
 }
 
-test('sitemap : exactement les 7 pages, robots.txt, fichiers privés non publiés', async ({ request }) => {
+test('sitemap : exactement les 8 pages, robots.txt, fichiers privés non publiés', async ({ request }) => {
     const sitemap = await (await request.get('/sitemap.xml')).text();
     const adresses = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(function(m) { return m[1]; });
     expect([...adresses].sort()).toEqual(PAGES.map(function(infos) { return DOMAINE + infos.chemin; }).sort());

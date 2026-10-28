@@ -5,11 +5,13 @@
   ajoutée à la fiche Google par _includes/service/fiche.html, et le lien « FAQ »
   du menu apparaît dès que faq existe.
 {%- endcomment -%}
+{%- assign langue = page.langue | default: "fr" -%}
+{%- assign t = site.data.service[langue] -%}
 {%- assign tel = site.data.entreprise.telephone -%}
 <section id="faq" class="bg-gray-950 px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto max-w-4xl">
                 <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">Questions fréquentes</p>
+                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">{{ t.faq.surtitre }}</p>
                     <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
                         {{ page.faq.titre }}
                     </h2>
@@ -28,8 +30,8 @@
                 </div>
 
                 <p class="mt-10 text-center text-gray-300">
-                    Une autre question? <a href="#contact" class="font-semibold text-orange-400 transition-colors hover:text-orange-300">Écrivez-moi</a>
-                    ou appelez au <a href="{{ tel.lien }}" class="whitespace-nowrap font-semibold text-orange-400 transition-colors hover:text-orange-300">{{ tel.affiche }}</a>.
+                    {{ t.faq.autre }} <a href="#contact" class="font-semibold text-orange-400 transition-colors hover:text-orange-300">{{ t.faq.ecrire }}</a>
+                    {{ t.faq.appeler }} <a href="{{ tel.lien }}" class="whitespace-nowrap font-semibold text-orange-400 transition-colors hover:text-orange-300">{{ tel.affiche }}</a>.
                 </p>
             </div>
         </section>

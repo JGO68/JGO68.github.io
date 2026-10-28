@@ -3,9 +3,11 @@
   page : fiche.nom, fiche.description, fiche.catalogue, fiche.service, fiche.type_service.
   Si la page a une FAQ (faq.questions, voir _includes/service/faq.html), elle est
   ajoutée au graphe.
-  Coordonnées : _data/entreprise.yml.
+  Coordonnées : _data/entreprise.yml ; textes selon la langue : _data/service.yml.
 {%- endcomment -%}
 {%- assign e = site.data.entreprise -%}
+{%- assign langue = page.langue | default: "fr" -%}
+{%- assign t = site.data.service[langue] -%}
 {%- assign adresse = e.site | append: page.url -%}
 <script type="application/ld+json">
     {
@@ -17,7 +19,7 @@
           "url": "{{ adresse }}",
           "name": {{ page.fiche.nom | jsonify }},
           "description": {{ page.fiche.description | jsonify }},
-          "inLanguage": "fr-CA",
+          "inLanguage": "{{ t.lang }}",
           "isPartOf": {
             "@id": "{{ e.site }}/#website"
           },
@@ -37,7 +39,7 @@
           "@id": "{{ e.site }}/#business",
           "name": {{ e.nom | jsonify }},
           "image": "{{ e.image }}",
-          "description": "DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages, événements corporatifs et partys privés.",
+          "description": {{ t.fiche.description | jsonify }},
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Québec",
@@ -76,7 +78,7 @@
         {
           "@type": "FAQPage",
           "@id": "{{ adresse }}#faq",
-          "inLanguage": "fr-CA",
+          "inLanguage": "{{ t.lang }}",
           "isPartOf": { "@id": "{{ adresse }}#page" },
           "mainEntity": [
             {%- for q in page.faq.questions %}

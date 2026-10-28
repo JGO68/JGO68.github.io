@@ -1,12 +1,14 @@
 {%- comment -%} Boutons « Demander une soumission » et « Appeler » du haut des pages services. {%- endcomment -%}
+{%- assign langue = page.langue | default: "fr" -%}
+{%- assign t = site.data.service[langue] -%}
 {%- assign tel = site.data.entreprise.telephone -%}
 <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                         <a href="#contact"
                             class="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-4 text-center text-lg font-bold text-white shadow-lg shadow-orange-950/30 transition-all hover:-translate-y-1 hover:from-orange-600 hover:to-orange-700">
-                            Demander une soumission
+                            {{ t.boutons.soumission }}
                         </a>
                         <a href="{{ tel.lien }}"
                             class="inline-flex items-center justify-center rounded-lg border border-orange-400/60 px-6 py-4 text-center text-lg font-semibold text-orange-200 transition-colors hover:border-orange-300 hover:bg-orange-500/10">
-                            Appeler le {{ tel.affiche }}
+                            {{ t.boutons.appeler }} {{ tel.affiche }}
                         </a>
                     </div>

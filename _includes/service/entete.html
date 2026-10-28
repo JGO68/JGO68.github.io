@@ -1,27 +1,43 @@
+{%- comment -%}
+  Menu du haut des pages services. Front matter de la page : menu_projet, faq,
+  langue (fr par défaut), langues (adresses de la page dans chaque langue, ex. la
+  paire Mariage FR / Wedding EN ; sinon EN mène à l'accueil anglais).
+{%- endcomment -%}
+{%- assign langue = page.langue | default: "fr" -%}
+{%- assign t = site.data.service[langue] -%}
+{%- assign langues = "fr,en" | split: "," -%}
+{%- assign defaut = page.url | append: ",/index-en.html" | split: "," -%}
 <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
         <nav class="container mx-auto flex items-center justify-between gap-4 px-4 py-4 lg:px-8"
-            aria-label="Navigation principale">
-            <a href="/" class="shrink-0 text-lg font-bold tracking-tight text-orange-500 sm:text-xl"
-                aria-label="Retour à l'accueil de DJ Steeve H.">
+            aria-label="{{ t.entete.navigation }}">
+            <a href="{{ t.pied.accueil }}" class="shrink-0 text-lg font-bold tracking-tight text-orange-500 sm:text-xl"
+                aria-label="{{ t.entete.retour }}">
                 DJ Steeve H.
             </a>
 
             <div class="hidden items-center gap-6 text-sm text-gray-200 md:flex">
-                <a href="/" class="transition-colors hover:text-orange-400">Accueil</a>
+                <a href="{{ t.pied.accueil }}" class="transition-colors hover:text-orange-400">{{ t.entete.accueil }}</a>
                 <a href="#sur-mesure" class="transition-colors hover:text-orange-400">{{ page.menu_projet }}</a>
-                <a href="#avis" class="transition-colors hover:text-orange-400">Avis</a>
+                <a href="#avis" class="transition-colors hover:text-orange-400">{{ t.entete.avis }}</a>
                 <a href="#mixes" class="transition-colors hover:text-orange-400">Mixes</a>
 {%- if page.faq %}
                 <a href="#faq" class="transition-colors hover:text-orange-400">FAQ</a>
 {%- endif %}
-                <a href="#contact" class="transition-colors hover:text-orange-400">Soumission</a>
+                <a href="#contact" class="transition-colors hover:text-orange-400">{{ t.entete.soumission }}</a>
             </div>
 
             <div class="flex items-center gap-2 sm:gap-3">
                 <div class="flex shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-wide"
-                    aria-label="Choix de langue">
-                    <a href="{{ page.url }}" class="text-orange-400" aria-current="page">FR</a>
-                    <a href="/index-en.html" class="text-gray-300 transition-colors hover:text-orange-400">EN</a>
+                    aria-label="{{ t.entete.langues }}">
+{%- for code in langues %}
+{%- assign cible = page.langues[code] | default: defaut[forloop.index0] %}
+{%- assign etiquette = code | upcase %}
+{%- if code == langue %}
+                    <a href="{{ cible }}" class="text-orange-400" aria-current="page">{{ etiquette }}</a>
+{%- else %}
+                    <a href="{{ cible }}" class="text-gray-300 transition-colors hover:text-orange-400">{{ etiquette }}</a>
+{%- endif %}
+{%- endfor %}
                     <a href="/index-es.html" class="text-gray-300 transition-colors hover:text-orange-400">ES</a>
                 </div>
                 <a href="{{ site.data.entreprise.telephone.lien }}"
@@ -30,7 +46,7 @@
                 </a>
                 <a href="#contact"
                     class="whitespace-nowrap rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-3 py-2 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:from-orange-600 hover:to-orange-700 sm:px-4">
-                    Soumission
+                    {{ t.entete.soumission }}
                 </a>
             </div>
         </nav>

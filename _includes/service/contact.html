@@ -2,13 +2,15 @@
   Haut de la section Contact des pages services. Paramètres : accroche (petit titre), pour
   (fin de la phrase « ou complétez le formulaire pour … »).
 {%- endcomment -%}
+{%- assign langue = page.langue | default: "fr" -%}
+{%- assign t = site.data.service[langue] -%}
 {%- assign tel = site.data.entreprise.telephone -%}
 <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
                     <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">{{ include.accroche }}</p>
-                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Demander une soumission</h2>
+                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{{ t.contact.titre }}</h2>
                     <p class="mt-6 text-lg leading-relaxed text-gray-300">
-                        Appelez-moi au <a href="{{ tel.lien }}"
+                        {{ t.contact.appeler }} <a href="{{ tel.lien }}"
                             class="whitespace-nowrap font-semibold text-orange-400 transition-colors hover:text-orange-300">{{ tel.affiche }}</a>
-                        ou complétez le formulaire pour {{ include.pour }}
+                        {{ t.contact.formulaire }} {{ include.pour }}
                     </p>
                 </div>

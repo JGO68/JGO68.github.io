@@ -1,13 +1,15 @@
 {%- comment -%} Section Mixes des pages services. Mixes : _data/entreprise.yml. {%- endcomment -%}
+{%- assign langue = page.langue | default: "fr" -%}
+{%- assign t = site.data.service[langue] -%}
 <section id="mixes" class="bg-gradient-to-b from-gray-900 to-black px-4 py-20 sm:px-6 md:py-28">
             <div class="container mx-auto max-w-6xl">
                 <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">À écouter</p>
+                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">{{ t.mixes.surtitre }}</p>
                     <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-                        Quelques-uns de mes mixes
+                        {{ t.mixes.titre }}
                     </h2>
                     <p class="mt-6 text-lg leading-relaxed text-gray-300">
-                        Découvrez quelques mixes de DJ Steeve H. pour vous faire une idée de son univers musical.
+                        {{ t.mixes.texte }}
                     </p>
                 </div>
 

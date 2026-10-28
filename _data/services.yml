@@ -1,10 +1,15 @@
 # Les 4 pages services, dans l'ordre du pied de page.
-# Utilisé par _includes/service/pied.html (liens « Autres services »).
+# Utilisé par _includes/service/pied.html (liens « Autres services ») ;
+# libelle_en : texte du lien sur les pages anglaises.
 - url: /dj-mariage-quebec/
   libelle: DJ de mariage à Québec
+  libelle_en: Wedding DJ in Quebec City
 - url: /dj-anniversaire-quebec/
   libelle: DJ d'anniversaire à Québec
+  libelle_en: Birthday party DJ in Quebec City
 - url: /dj-corporatif-quebec/
   libelle: DJ corporatif à Québec
+  libelle_en: Corporate event DJ in Quebec City
 - url: /dj-party-noel-quebec/
   libelle: DJ pour party de Noël à Québec
+  libelle_en: Christmas party DJ in Quebec City
