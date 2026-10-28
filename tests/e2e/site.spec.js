@@ -155,6 +155,9 @@ for (const infos of PAGES) {
         });
 
         test('affichage : la page tient dans l\'écran et le formulaire est accessible', async ({ page }) => {
+            // Défilement instantané (prefers-reduced-motion, géré par src/styles.css) : le défilement
+            // animé des longues pages (FAQ) dépasse les délais dans le Safari lent de CI.
+            await page.emulateMedia({ reducedMotion: 'reduce' });
             await page.goto(infos.chemin);
             const largeurEcran = page.viewportSize().width;
             await defilerJusquEnBas(page);
@@ -165,8 +168,7 @@ for (const infos of PAGES) {
             const contact = infos.sections[infos.sections.length - 1];
             // force : voir envoyerFormulaire (Safari lent sans carte graphique).
             await page.locator(`header a[href="#${contact}"]`).filter({ visible: true }).first().click({ force: true });
-            // Défilement animé (scroll-behavior: smooth) : long sur les pages avec FAQ dans Safari de CI.
-            await expect(page.locator(`#${contact}`)).toBeInViewport({ timeout: 15000 });
+            await expect(page.locator(`#${contact}`)).toBeInViewport();
             await expect(page.locator(`${FORMULAIRE} button[type="submit"]`)).toBeVisible();
         });
     });
