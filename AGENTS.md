@@ -11,17 +11,24 @@ Pour les modifier, modifier le bloc, pas les pages :
   Mixcloud et avis Google, liste des mixes. Ne jamais écrire ces informations en dur
   dans une page : utiliser `{{ site.data.entreprise.… }}`.
 - `_includes/analytics.html` : balise Google Analytics.
-- `_includes/service/` : blocs des pages services (`dj-*-quebec/`) : `entete.html`,
+- `_includes/service/` : blocs des pages services (`dj-*-quebec/`, `wedding-dj-quebec-city/`) : `entete.html`,
   `pied.html`, `mixes.html`, `avis.html`, `zone.html`, `contact.html` (haut de la
   section Contact), `boutons.html` (boutons du haut de page) et `fiche.html` (fiche
   Google JSON-LD ; textes propres à la page dans son front matter, `fiche.*`).
-- `_data/services.yml` : liste des pages services (liens du pied de page).
-- `_includes/formulaire.html` : formulaire de soumission des 7 pages ; textes FR / EN / ES
+  Textes FR / EN de ces blocs dans `_data/service.yml` ; la langue vient de `langue: en`
+  dans le front matter de la page (sans `langue` : français).
+- Pages services traduites : `langues: { fr: …, en: … }` dans le front matter des deux
+  pages de la paire. Les liens FR / EN de l'en-tête suivent cette paire, et
+  `{% include service/hreflang.html %}` (dans le `<head>` des deux pages) ajoute les
+  balises hreflang.
+- `_data/services.yml` : liste des pages services (liens du pied de page ; `libelle_en`
+  pour les pages anglaises).
+- `_includes/formulaire.html` : formulaire de soumission des 8 pages ; textes FR / EN / ES
   dans `_data/formulaire.yml`, particularités de chaque page dans les paramètres de l'include.
 - `_includes/accueil/` : blocs des 3 accueils : `entete.html`, `pied.html`, `mixes.html`,
   `avis.html`, `contact.html` et `fiche.html`
   (fiche Google JSON-LD) ; textes FR / EN / ES dans `_data/accueil.yml`.
-- `_includes/avis.html` : cartes d'avis clients des 7 pages ; textes FR / EN / ES dans `_data/avis.yml`,
+- `_includes/avis.html` : cartes d'avis clients des 8 pages ; textes FR / EN / ES dans `_data/avis.yml`,
   avis affichés (et leur ordre) choisis par chaque page dans le paramètre `liste`.
 - FAQ des pages services : questions et réponses dans le front matter de la page
   (`faq.titre`, `faq.questions`), affichées par `_includes/service/faq.html` et ajoutées
