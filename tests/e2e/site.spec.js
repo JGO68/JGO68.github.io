@@ -165,7 +165,8 @@ for (const infos of PAGES) {
             const contact = infos.sections[infos.sections.length - 1];
             // force : voir envoyerFormulaire (Safari lent sans carte graphique).
             await page.locator(`header a[href="#${contact}"]`).filter({ visible: true }).first().click({ force: true });
-            await expect(page.locator(`#${contact}`)).toBeInViewport();
+            // Défilement animé (scroll-behavior: smooth) : long sur les pages avec FAQ dans Safari de CI.
+            await expect(page.locator(`#${contact}`)).toBeInViewport({ timeout: 15000 });
             await expect(page.locator(`${FORMULAIRE} button[type="submit"]`)).toBeVisible();
         });
     });
