@@ -1,0 +1,94 @@
+# Textes des blocs communs des pages services (_includes/service/), par langue.
+# Chaque page indique sa langue dans son front matter (langue: en) ; sans langue : fr.
+fr:
+  lang: fr-CA
+  et: et
+  entete:
+    navigation: Navigation principale
+    retour: Retour à l'accueil de DJ Steeve H.
+    accueil: Accueil
+    avis: Avis
+    soumission: Soumission
+    langues: Choix de langue
+  boutons:
+    soumission: Demander une soumission
+    appeler: Appeler le
+  avis:
+    surtitre: Des expériences partagées
+    titre: Avis de clients
+    note: 5.0 sur Google
+    sur_google: sur Google
+    etoiles: 5 étoiles
+    tous: Voir tous les avis sur Google
+  mixes:
+    surtitre: À écouter
+    titre: Quelques-uns de mes mixes
+    texte: Découvrez quelques mixes de DJ Steeve H. pour vous faire une idée de son univers musical.
+  zone:
+    surtitre: Québec et les environs
+    titre: Un service dans la grande région de Québec
+    secteurs: Secteurs desservis
+  faq:
+    surtitre: Questions fréquentes
+    autre: Une autre question?
+    ecrire: Écrivez-moi
+    appeler: ou appelez au
+  contact:
+    titre: Demander une soumission
+    appeler: Appelez-moi au
+    formulaire: ou complétez le formulaire pour
+  pied:
+    titre: DJ Steeve H. - DJ Professionnel à Québec
+    specialite: Spécialiste en musique Pop, Dance et Latino
+    retour: Retour à la page d'accueil
+    accueil: /
+    autres: Autres services
+    droits: Tous droits réservés.
+  fiche:
+    description: DJ professionnel à Québec spécialisé en musique pop, dance et latine. Animation de mariages, événements corporatifs et partys privés.
+en:
+  lang: en-CA
+  et: and
+  entete:
+    navigation: Main navigation
+    retour: Back to the DJ Steeve H. home page
+    accueil: Home
+    avis: Reviews
+    soumission: Get a quote
+    langues: Language
+  boutons:
+    soumission: Request a quote
+    appeler: Call
+  avis:
+    surtitre: Shared experiences
+    titre: Client reviews
+    note: 5.0 on Google
+    sur_google: on Google
+    etoiles: 5 stars
+    tous: See all reviews on Google
+  mixes:
+    surtitre: Listen
+    titre: Some of my mixes
+    texte: Listen to a few mixes by DJ Steeve H. to get a feel for his musical style.
+  zone:
+    surtitre: Quebec City and surrounding areas
+    titre: Serving the greater Quebec City area
+    secteurs: Areas served
+  faq:
+    surtitre: Frequently asked questions
+    autre: Another question?
+    ecrire: Write to me
+    appeler: or call
+  contact:
+    titre: Request a quote
+    appeler: Call me at
+    formulaire: or fill out the form for
+  pied:
+    titre: DJ Steeve H. - Professional DJ in Quebec City
+    specialite: Pop, Dance and Latin music specialist
+    retour: Back to the home page
+    accueil: /index-en.html
+    autres: Other services
+    droits: All rights reserved.
+  fiche:
+    description: Professional DJ in Quebec City specializing in pop, dance and latin music. Entertainment for weddings, corporate events and private parties.
