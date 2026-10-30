@@ -1,6 +1,6 @@
 # Galerie de photos des 8 pages (_includes/galerie.html), dans l'ordre d'affichage.
 # Fichiers : /galerie/<fichier>-400.webp, -800.webp et -1080.webp (recadrés en 3:4,
-# sans métadonnées). Photos choisies sans visage reconnaissable.
+# sans métadonnées). Photos choisies sans visage reconnaissable d'invité.
 textes:
   fr:
     ancre: galerie
@@ -38,6 +38,16 @@ photos:
       fr: Mariée qui danse sur la piste lors d'un mariage animé par DJ Steeve H.
       en: Bride dancing at a wedding with DJ Steeve H.
       es: Novia bailando en una boda animada por DJ Steeve H.
+  - fichier: dj-mariage-wendake-premiere-danse
+    alt:
+      fr: Première danse des mariés lors d'un mariage à Wendake
+      en: Newlyweds' first dance at a wedding in Wendake
+      es: Primer baile de los novios en una boda en Wendake
+  - fichier: dj-party-noel-quebec-piste-de-danse
+    alt:
+      fr: Piste de danse d'un party de Noël animé par DJ Steeve H.
+      en: Dance floor at a Christmas party with DJ Steeve H.
+      es: Pista de baile en una fiesta de Navidad animada por DJ Steeve H.
   - fichier: dj-mariage-quebec-piste-lumieres-roses
     alt:
       fr: Invités qui dansent sous les lumières roses et violettes d'un mariage
@@ -53,6 +63,11 @@ photos:
       fr: Piste de danse d'un mariage sous des globes lumineux blancs
       en: Wedding dance floor under white globe lights
       es: Pista de baile de una boda bajo globos de luz blancos
+  - fichier: dj-steeve-h-quebec-poste-de-dj
+    alt:
+      fr: DJ Steeve H. à son poste de DJ pendant un événement
+      en: DJ Steeve H. at his DJ booth during an event
+      es: DJ Steeve H. en su cabina de DJ durante un evento
   - fichier: dj-quebec-installation-son-eclairage
     alt:
       fr: "Installation de DJ Steeve H. : haut-parleurs, éclairage et table de DJ"
