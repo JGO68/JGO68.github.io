@@ -43,6 +43,11 @@ photos:
       fr: Invités qui dansent sous les lumières roses et violettes d'un mariage
       en: Wedding guests dancing under pink and purple lights
       es: Invitados bailando bajo luces rosas y violetas en una boda
+  - fichier: dj-quebec-piste-de-danse-boule-disco
+    alt:
+      fr: Piste de danse pleine sous une boule disco et des lumières colorées
+      en: Packed dance floor under a disco ball and colourful lights
+      es: Pista de baile llena bajo una bola de discoteca y luces de colores
   - fichier: dj-mariage-quebec-danse-globes-blancs
     alt:
       fr: Piste de danse d'un mariage sous des globes lumineux blancs
@@ -58,13 +63,28 @@ photos:
       fr: Piste de danse pleine sous des lumières bleues et vertes lors d'un mariage
       en: Packed wedding dance floor under blue and green lights
       es: Pista de baile llena bajo luces azules y verdes en una boda
+  - fichier: dj-quebec-piste-de-danse-batons-lumineux
+    alt:
+      fr: Invités avec des bâtons lumineux sur la piste de danse
+      en: Guests with glow sticks on the dance floor
+      es: Invitados con barras luminosas en la pista de baile
   - fichier: dj-quebec-installation-bar-reception
     alt:
       fr: Installation de DJ Steeve H. dans un bar de réception
       en: DJ Steeve H. setup in a reception bar
       es: Equipo de DJ Steeve H. en un bar de recepción
+  - fichier: dj-quebec-piste-de-danse-points-lumineux
+    alt:
+      fr: Danseurs couverts de points de lumière colorés
+      en: Dancers covered in colourful light dots
+      es: Bailarines cubiertos de puntos de luz de colores
   - fichier: dj-mariage-quebec-piste-lumieres-rouges
     alt:
       fr: Invités qui dansent sous des lumières rouges lors d'un mariage
       en: Wedding guests dancing under red lights
       es: Invitados bailando bajo luces rojas en una boda
+  - fichier: dj-quebec-piste-de-danse-lumieres-bleu-vert
+    alt:
+      fr: Invités qui dansent sous des lumières bleues et vertes
+      en: Guests dancing under blue and green lights
+      es: Invitados bailando bajo luces azules y verdes
