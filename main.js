@@ -114,6 +114,73 @@ function addAttributionFields() {
     });
 }
 
+// Galeries de photos (_includes/galerie.html) : flèches de défilement et photo
+// agrandie dans une fenêtre. Sans JavaScript, le lien ouvre simplement la photo.
+function initGalleries() {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll('[data-galerie]').forEach(function(gallery) {
+        const track = gallery.querySelector('.galerie-piste');
+        const previous = gallery.querySelector('[data-galerie-precedent]');
+        const next = gallery.querySelector('[data-galerie-suivant]');
+
+        function updateArrows() {
+            previous.disabled = track.scrollLeft <= 1;
+            next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+        }
+
+        function scrollByPage(direction) {
+            track.scrollBy({ left: direction * track.clientWidth * 0.8, behavior: reducedMotion ? 'auto' : 'smooth' });
+        }
+
+        previous.addEventListener('click', function() { scrollByPage(-1); });
+        next.addEventListener('click', function() { scrollByPage(1); });
+        track.addEventListener('scroll', updateArrows, { passive: true });
+        window.addEventListener('resize', updateArrows);
+        updateArrows();
+
+        gallery.querySelectorAll('[data-galerie-photo]').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                if (typeof HTMLDialogElement !== 'function') {
+                    return;
+                }
+                event.preventDefault();
+                openPhoto(link.href, link.querySelector('img').alt, gallery.dataset.fermer, link);
+            });
+        });
+    });
+}
+
+// Fenêtre de la photo agrandie, créée au premier clic (aucune image vide dans la page).
+function openPhoto(source, alt, closeLabel, origin) {
+    let dialog = document.querySelector('dialog.galerie-fenetre');
+    if (!dialog) {
+        dialog = document.createElement('dialog');
+        dialog.className = 'galerie-fenetre';
+        const close = document.createElement('button');
+        close.type = 'button';
+        close.className = 'galerie-fermer';
+        close.textContent = '×';
+        close.addEventListener('click', function() { dialog.close(); });
+        const image = document.createElement('img');
+        dialog.append(close, image);
+        // Un clic à côté de la photo ferme la fenêtre.
+        dialog.addEventListener('click', function(event) {
+            if (event.target === dialog) { dialog.close(); }
+        });
+        dialog.addEventListener('close', function() {
+            if (dialog.origin) { dialog.origin.focus(); }
+        });
+        document.body.appendChild(dialog);
+    }
+    const image = dialog.querySelector('img');
+    image.src = source;
+    image.alt = alt;
+    dialog.querySelector('.galerie-fermer').setAttribute('aria-label', closeLabel);
+    dialog.origin = origin;
+    dialog.showModal();
+}
+
 // Initialize AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof AOS !== 'undefined') {
@@ -125,4 +192,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     addAttributionFields();
+    initGalleries();
 });

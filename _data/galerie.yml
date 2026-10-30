@@ -1,0 +1,70 @@
+# Galerie de photos des 8 pages (_includes/galerie.html), dans l'ordre d'affichage.
+# Fichiers : /galerie/<fichier>-400.webp, -800.webp et -1080.webp (recadrés en 3:4,
+# sans métadonnées). Photos choisies sans visage reconnaissable.
+textes:
+  fr:
+    ancre: galerie
+    surtitre: En images
+    titre: DJ Steeve H. en action
+    texte: "Quelques moments de soirées animées par DJ Steeve H. : pistes de danse, éclairage et installation."
+    liste: Galerie de photos
+    precedent: Photo précédente
+    suivant: Photo suivante
+    agrandir: "Agrandir la photo :"
+    fermer: Fermer
+  en:
+    ancre: gallery
+    surtitre: In pictures
+    titre: DJ Steeve H. in action
+    texte: "A few moments from events with DJ Steeve H.: dance floors, lighting and setup."
+    liste: Photo gallery
+    precedent: Previous photo
+    suivant: Next photo
+    agrandir: "Enlarge photo:"
+    fermer: Close
+  es:
+    ancre: galeria
+    surtitre: En imágenes
+    titre: DJ Steeve H. en acción
+    texte: "Algunos momentos de fiestas animadas por DJ Steeve H.: pistas de baile, iluminación y equipo."
+    liste: Galería de fotos
+    precedent: Foto anterior
+    suivant: Foto siguiente
+    agrandir: "Ampliar la foto:"
+    fermer: Cerrar
+photos:
+  - fichier: dj-mariage-quebec-mariee-piste-de-danse
+    alt:
+      fr: Mariée qui danse sur la piste lors d'un mariage animé par DJ Steeve H.
+      en: Bride dancing at a wedding with DJ Steeve H.
+      es: Novia bailando en una boda animada por DJ Steeve H.
+  - fichier: dj-mariage-quebec-piste-lumieres-roses
+    alt:
+      fr: Invités qui dansent sous les lumières roses et violettes d'un mariage
+      en: Wedding guests dancing under pink and purple lights
+      es: Invitados bailando bajo luces rosas y violetas en una boda
+  - fichier: dj-mariage-quebec-danse-globes-blancs
+    alt:
+      fr: Piste de danse d'un mariage sous des globes lumineux blancs
+      en: Wedding dance floor under white globe lights
+      es: Pista de baile de una boda bajo globos de luz blancos
+  - fichier: dj-quebec-installation-son-eclairage
+    alt:
+      fr: "Installation de DJ Steeve H. : haut-parleurs, éclairage et table de DJ"
+      en: "DJ Steeve H. setup: speakers, lighting and DJ table"
+      es: "Equipo de DJ Steeve H.: altavoces, iluminación y mesa de DJ"
+  - fichier: dj-mariage-quebec-piste-lumieres-bleues
+    alt:
+      fr: Piste de danse pleine sous des lumières bleues et vertes lors d'un mariage
+      en: Packed wedding dance floor under blue and green lights
+      es: Pista de baile llena bajo luces azules y verdes en una boda
+  - fichier: dj-quebec-installation-bar-reception
+    alt:
+      fr: Installation de DJ Steeve H. dans un bar de réception
+      en: DJ Steeve H. setup in a reception bar
+      es: Equipo de DJ Steeve H. en un bar de recepción
+  - fichier: dj-mariage-quebec-piste-lumieres-rouges
+    alt:
+      fr: Invités qui dansent sous des lumières rouges lors d'un mariage
+      en: Wedding guests dancing under red lights
+      es: Invitados bailando bajo luces rojas en una boda
