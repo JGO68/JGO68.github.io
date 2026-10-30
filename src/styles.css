@@ -141,3 +141,47 @@ section {
 .hero-delay-4 {
     animation-delay: 0.4s;
 }
+
+/* Galerie de photos (_includes/galerie.html) : barre de défilement masquée
+   (on fait défiler au doigt ou avec les flèches). */
+.galerie-piste {
+    scrollbar-width: none;
+}
+
+.galerie-piste::-webkit-scrollbar {
+    display: none;
+}
+
+/* Photo agrandie (créée par main.js). */
+.galerie-fenetre {
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    overflow: visible;
+}
+
+.galerie-fenetre::backdrop {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.galerie-fenetre img {
+    display: block;
+    max-width: 92vw;
+    max-height: 80vh;
+    border-radius: 0.75rem;
+}
+
+.galerie-fermer {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fdba74;
+    font-size: 2rem;
+    line-height: 1;
+}

@@ -1,0 +1,43 @@
+{%- comment -%}
+  Galerie de photos défilante des 8 pages. Paramètres : style : accueil (accueils,
+  avec langue : fr, en, es) ou service (pages services ; langue tirée de page.langue).
+  Photos et textes : _data/galerie.yml. Flèches et agrandissement : main.js
+  (sans JavaScript, on fait défiler au doigt et le lien ouvre la photo).
+{%- endcomment -%}
+{%- assign langue = include.langue | default: page.langue | default: "fr" -%}
+{%- assign t = site.data.galerie.textes[langue] -%}
+{%- if include.style == "accueil" -%}
+{%- assign ancre = t.ancre -%}
+{%- else -%}
+{%- assign ancre = "galerie" -%}
+{%- endif %}
+<section id="{{ ancre }}" class="{% if include.style == "accueil" %}bg-gradient-to-b from-gray-900 to-black py-24{% else %}bg-black py-20 md:py-28{% endif %} px-4 sm:px-6" data-galerie data-fermer="{{ t.fermer }}">
+            <div class="container mx-auto max-w-6xl">
+                <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+                    <p class="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-orange-400">{{ t.surtitre }}</p>
+                    <h2 class="gradient-text text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{{ t.titre }}</h2>
+                    <p class="mt-6 text-lg leading-relaxed text-gray-300">{{ t.texte }}</p>
+                </div>
+
+                <div class="relative mt-12">
+                    <ul class="galerie-piste -mx-1 flex snap-x snap-mandatory scroll-px-1 gap-4 overflow-x-auto p-1" aria-label="{{ t.liste }}" tabindex="0">
+                        {%- for photo in site.data.galerie.photos %}
+                        {%- assign chemin = "/galerie/" | append: photo.fichier %}
+                        <li class="w-[72%] shrink-0 snap-start sm:w-[45%] md:w-[31%]">
+                            <a href="{{ chemin }}-1080.webp" class="block overflow-hidden rounded-xl border border-orange-500/20" data-galerie-photo
+                                aria-label="{{ t.agrandir }} {{ photo.alt[langue] }}">
+                                <img src="{{ chemin }}-800.webp" srcset="{{ chemin }}-400.webp 400w, {{ chemin }}-800.webp 800w"
+                                    sizes="(min-width: 1152px) 340px, (min-width: 768px) 31vw, (min-width: 640px) 45vw, 72vw"
+                                    alt="{{ photo.alt[langue] }}" width="800" height="1066" loading="lazy" decoding="async"
+                                    class="aspect-[3/4] w-full object-cover transition-transform duration-300 hover:scale-105">
+                            </a>
+                        </li>
+                        {%- endfor %}
+                    </ul>
+                    <button type="button" class="absolute left-0 top-1/2 hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-orange-500/40 bg-black/80 text-2xl text-orange-300 transition-colors hover:text-orange-200 disabled:opacity-30 md:flex"
+                        data-galerie-precedent aria-label="{{ t.precedent }}"><span aria-hidden="true">←</span></button>
+                    <button type="button" class="absolute right-0 top-1/2 hidden h-12 w-12 -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-orange-500/40 bg-black/80 text-2xl text-orange-300 transition-colors hover:text-orange-200 disabled:opacity-30 md:flex"
+                        data-galerie-suivant aria-label="{{ t.suivant }}"><span aria-hidden="true">→</span></button>
+                </div>
+            </div>
+        </section>

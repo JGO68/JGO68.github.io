@@ -30,6 +30,10 @@ Pour les modifier, modifier le bloc, pas les pages :
   (fiche Google JSON-LD) ; textes FR / EN / ES dans `_data/accueil.yml`.
 - `_includes/avis.html` : cartes d'avis clients des 8 pages ; textes FR / EN / ES dans `_data/avis.yml`,
   avis affichés (et leur ordre) choisis par chaque page dans le paramètre `liste`.
+- `_includes/galerie.html` : galerie de photos défilante des 8 pages (après « Mes Services »
+  sur les accueils, après « Sur mesure » sur les pages services). Photos et textes FR / EN / ES
+  dans `_data/galerie.yml`, fichiers dans `galerie/` (webp 400, 800 et 1080 px, recadrés en 3:4,
+  sans métadonnées, sans visage reconnaissable). Flèches et photo agrandie : `main.js`.
 - FAQ des pages services : questions et réponses dans le front matter de la page
   (`faq.titre`, `faq.questions`), affichées par `_includes/service/faq.html` et ajoutées
   à la fiche Google par `fiche.html`. Écrire `[villes]` dans une réponse pour la liste

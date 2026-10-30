@@ -57,7 +57,7 @@ const PAGES = [
         chemin: '/',
         langue: 'fr',
         lang: 'fr-CA',
-        sections: ['accueil', 'services', 'avis', 'mixes', 'contact'],
+        sections: ['accueil', 'services', 'galerie', 'avis', 'mixes', 'contact'],
         requis: ['nom', 'email', 'date_evenement', 'lieu', 'message'],
         bouton: 'Envoyer'
     },
@@ -67,7 +67,7 @@ const PAGES = [
         chemin: '/index-en.html',
         langue: 'en',
         lang: 'en-CA',
-        sections: ['home', 'services', 'reviews', 'mixes', 'contact'],
+        sections: ['home', 'services', 'gallery', 'reviews', 'mixes', 'contact'],
         requis: ['name', 'email', 'date_evenement', 'lieu', 'message'],
         bouton: 'Send'
     },
@@ -77,7 +77,7 @@ const PAGES = [
         chemin: '/index-es.html',
         langue: 'es',
         lang: 'es',
-        sections: ['inicio', 'servicios', 'opiniones', 'mixes', 'contacto'],
+        sections: ['inicio', 'servicios', 'galeria', 'opiniones', 'mixes', 'contacto'],
         requis: ['nombre', 'email', 'date_evenement', 'lieu', 'mensaje'],
         bouton: 'Enviar'
     },
@@ -88,7 +88,7 @@ const PAGES = [
         chemin: '/dj-mariage-quebec/',
         ogImage: '/mariage.jpg',
         jsonLd: ['WebPage', 'WebSite', 'LocalBusiness', 'FAQPage'],
-        sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'anniversaire', 'avis', 'mixes', 'zone', 'faq', 'contact'],
+        sections: ['accueil', 'sur-mesure', 'galerie', 'moments', 'musique', 'anniversaire', 'avis', 'mixes', 'zone', 'faq', 'contact'],
         requis: ['nom', 'email', 'date_evenement', 'lieu', 'message'],
         bouton: 'Demander une soumission pour mon mariage'
     },
@@ -101,7 +101,7 @@ const PAGES = [
         lang: 'en-CA',
         ogImage: '/mariage.jpg',
         jsonLd: ['WebPage', 'WebSite', 'LocalBusiness', 'FAQPage'],
-        sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'services', 'avis', 'mixes', 'zone', 'faq', 'contact'],
+        sections: ['accueil', 'sur-mesure', 'galerie', 'moments', 'musique', 'services', 'avis', 'mixes', 'zone', 'faq', 'contact'],
         requis: ['name', 'email', 'date_evenement', 'lieu', 'message'],
         bouton: 'Request a quote for my wedding'
     },
@@ -111,7 +111,7 @@ const PAGES = [
         chemin: '/dj-party-noel-quebec/',
         ogImage: '/corporatif.jpg',
         jsonLd: ['WebPage', 'WebSite', 'LocalBusiness', 'FAQPage'],
-        sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'corporatif', 'avis', 'mixes', 'zone', 'faq', 'contact'],
+        sections: ['accueil', 'sur-mesure', 'galerie', 'moments', 'musique', 'corporatif', 'avis', 'mixes', 'zone', 'faq', 'contact'],
         requis: ['nom', 'email', 'entreprise', 'date_evenement', 'lieu', 'message'],
         bouton: 'Demander une soumission pour notre party de Noël'
     },
@@ -121,7 +121,7 @@ const PAGES = [
         chemin: '/dj-anniversaire-quebec/',
         ogImage: '/soiree.jpg',
         jsonLd: ['WebPage', 'WebSite', 'LocalBusiness', 'FAQPage'],
-        sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'avis', 'mixes', 'zone', 'faq', 'contact'],
+        sections: ['accueil', 'sur-mesure', 'galerie', 'moments', 'musique', 'avis', 'mixes', 'zone', 'faq', 'contact'],
         requis: ['nom', 'email', 'date_evenement', 'lieu', 'message'],
         bouton: 'Demander une soumission pour mon anniversaire'
     },
@@ -131,7 +131,7 @@ const PAGES = [
         chemin: '/dj-corporatif-quebec/',
         ogImage: '/corporatif.jpg',
         jsonLd: ['WebPage', 'WebSite', 'LocalBusiness', 'FAQPage'],
-        sections: ['accueil', 'sur-mesure', 'moments', 'musique', 'party-noel', 'avis', 'mixes', 'zone', 'faq', 'contact'],
+        sections: ['accueil', 'sur-mesure', 'galerie', 'moments', 'musique', 'party-noel', 'avis', 'mixes', 'zone', 'faq', 'contact'],
         requis: ['nom', 'email', 'entreprise', 'type_evenement', 'date_evenement', 'lieu', 'message'],
         bouton: 'Demander une soumission pour notre événement'
     }
